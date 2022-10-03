@@ -63,14 +63,14 @@ collections:
               widget: "list",
               fields:
                 [
-                  { label: "Link Text", name: "text", widget: "string" },
-                  { label: "URL", name: "text", widget: "string" },
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
                 ],
             },
           ]
       - file: "data/footer.yml"
         label: "Footer"
-        name: "header"
+        name: "footer"
         fields:
           [
             {
@@ -97,8 +97,8 @@ collections:
               widget: "list",
               fields:
                 [
-                  { label: "Link Text", name: "text", widget: "string" },
-                  { label: "URL", name: "text", widget: "string" },
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
                 ],
             },
           ]
