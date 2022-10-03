@@ -4,8 +4,10 @@ backend:
   branch: main
 media_folder: "/static/media" # Folder where user uploaded files should go
 public_folder: "/media"
+site_url: https://dulcet-sherbet-ce84ad.netlify.app/
+show_preview_links: true
 editor:
-  preview: false
+  preview: true
 locale: 'en'
 
 # Allow local visit
