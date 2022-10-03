@@ -1,29 +1,21 @@
-baseURL = 'https://roneo.itcouldbewor.se/'
+baseURL = 'https://fran-cool.netlify.app/'
 languageCode = 'en-us'
 defaultContentLanguage = 'en'
 
 
 [params]
-  title = 'Remix, a theme for Hugo fully editable with Netlify CMS'
-  metaDescription = "Hugo + Netlify CMS + One click deploy to Netlify"
+  title = "fran.cool"
 
 
 # Languages
 [Languages.en]
-languageName = "En"
-languageCode = "en-us"
-contentDir = "content/english"
-weight = 1
-mark = "EN"
-
-[Languages.fr]
-languageName = "fr"
-languageCode = "fr-fr"
-contentDir = "content/fr"
-weight = 2
-mark = "FR"
+  languageName = "En"
+  languageCode = "en-us"
+  contentDir = "content"
+  weight = 1
+  mark = "EN"
 
 
 [taxonomies]
-  category= "theme"
-  scene = "scenes"
+  page= "pages"
+  works = "works"
