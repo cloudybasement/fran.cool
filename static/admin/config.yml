@@ -4,12 +4,12 @@ backend:
   branch: main
 media_folder: "/static/media" # Folder where user uploaded files should go
 public_folder: "/media"
-site_url: https://dulcet-sherbet-ce84ad.netlify.app/
+site_url: https://fran-cool.netlify.app/
 show_preview_links: true
 publish_mode: editorial_workflow
 editor:
   preview: true
-locale: 'en'
+locale: "en"
 
 # Allow local visit
 # You need to run at the root of the project `npx netlify-cms-proxy-server`
@@ -18,7 +18,7 @@ local_backend: true
 # i18n https://www.netlifycms.org/docs/beta-features/#i18n-support
 i18n:
   structure: multiple_folders
-  locales: [ en, fr ]
+  locales: [en, fr]
   default_locale: en
 
 media_library:
@@ -29,126 +29,82 @@ media_library:
 
 # collections configuration
 collections:
-  - name: "sections"
-    label: "Global settings"
-    i18n:
-      structure: single_file
-      locales: [ en, fr ]
+  - name: "global"
+    label: "Global Settings"
     files:
-      - file: "data/home.yml"
-        i18n: true
-        label: "Home"
-        name: "home"
-        fields: [
-          { label: "Title", name: "title", widget: string, i18n: true },
-          { label: "Slogan", name: "slogan", widget: string, i18n: true },
-          { label: "Description", name: "shortDescription", widget: "text", i18n: true },
-          { label: "Header Image", name: "image", widget: "image" , media_folder: "/static/media" , public_folder: "/media", i18n: true },
-          { label: "Register", name: "register", widget: string, i18n: true },
-          { label: "Copyright", name: "copyright", widget: string, i18n: true },
-        ]
-      - file: "data/about.yml"
-        label: "About"
-        name: "about"
-        i18n: true
-        description: "Go to edit the about section"
+      - file: "data/start-screen.yml"
+        label: "Start Screen"
+        name: "start-screen"
         fields:
           [
-            { label: "Title", name: "title", widget: string, i18n: true },
-            { label: "BackgroundTitle", name: "backgroundTitle", widget: string, i18n: true },
-            { label: "Items", name: "items", widget: "list", i18n: true, fields: [
-              { label: "Icon", name: "icon", widget: string , i18n: true },
-              { label: "Title", name: "title", widget: string, i18n: true },
-              { label: "Content", name: "content", widget: text, i18n: true }]
-            }
+            {
+              label: "Title Top",
+              name: "title-top",
+              widget: string,
+              default: "fran is",
+            },
+            {
+              label: "Title Bottom",
+              name: "title-bottom",
+              widget: string,
+              default: "COOL",
+            },
+            { label: "Image", name: "image", widget: "image" },
           ]
-      - file: "data/products.yml"
-        label: "Products"
-        name: "productions"
-        i18n: true
+      - file: "data/header.yml"
+        label: "Header"
+        name: "header"
         fields:
           [
-            { label: "Title", name: "title", widget: string, i18n: true },
-            { label: "BackgroundTitle", name: "backgroundTitle", widget: string, i18n: true },
-            { label: "PortText", name: "portText", widget: "text", i18n: true, required: false },
-            { label: "Categories", name: "theme", widget: "list", i18n: true, fields: [
-              { label: "Image", name: "coverImage", widget: "image" , media_folder: "/static/media" , public_folder: "/media", i18n: true },
-              { label: "Name", name: "name", widget: string, i18n: true },
-              { label: "theme", name: "cSlug", widget: select, i18n: true, options: [
-                { label: "c1", value: "c1" },
-                { label: "c2", value: "c2" },
-                { label: "c3", value: "c3" },
-                { label: "c4", value: "c4" },
-                { label: "c5", value: "c5" },
-              ] },
-              { label: "Description", name: "description", widget: text , i18n: true },
-            ] }
+            { label: "Logo", name: "logo", widget: "image" },
+            {
+              label: "Links",
+              name: "links",
+              widget: "list",
+              fields:
+                [
+                  { label: "Link Text", name: "text", widget: "string" },
+                  { label: "URL", name: "text", widget: "string" },
+                ],
+            },
           ]
-      - file: "data/scenes.yml"
-        label: "Solutions"
-        name: "industry"
-        i18n: true
+      - file: "data/footer.yml"
+        label: "Footer"
+        name: "header"
         fields:
           [
-            { label: "Title", name: "title", widget: string, i18n: true },
-            { label: "BackgroundTitle", name: "backgroundTitle", widget: string, i18n: true },
-            { label: "PortText", name: "portText", widget: "text", i18n: true, required: false },
-            { label: "scenes", name: "scenes", widget: "list", i18n: true, fields: [
-              { label: "CoverImage", name: "coverImage", widget: "image" , media_folder: "/static/media" , public_folder: "/media", i18n: true },
-              { label: "Name", name: "name", widget: string, i18n: true },
-              { label: "Scene", name: "cSlug", widget: select, i18n: true, options: [
-                { label: "化工", value: "s1" },
-                { label: "食品", value: "s2" },
-                { label: "石油", value: "s3" },
-                { label: "制药", value: "s4" },
-              ] },
-              { label: "Description", name: "description", widget: text , i18n: true },
-              { label: "icon", name: "icon", widget: string , i18n: true },
-            ] }
-          ]
-      - file: "data/news.yml"
-        label: "News"
-        name: "news"
-        i18n: true
-        fields:
-          [
-            { label: "Title", name: "title", widget: string, i18n: true },
-            { label: "BackgroundTitle", name: "backgroundTitle", widget: string, i18n: true },
-            { label: "portText", name: "portText", widget: string, i18n: true, required: false },
-          ]
-      - file: "data/contact.yml"
-        label: "Contact"
-        name: "contact"
-        i18n: true
-        fields:
-          [
-            { label: "Title", name: "title", widget: string, i18n: true },
-            { label: "BackgroundTitle", name: "backgroundTitle", widget: string, i18n: true },
-            { label: "Subtitle", name: "subtitle", widget: string, i18n: true, required: false },
-            { label: "Detail", name: "detail", widget: string, i18n: true },
-            { label: "Location", name: "location", widget: string , i18n: true },
-            { label: "Email", name: "email", widget: string , i18n: true, required: false },
-            { label: "Fax", name: "fax", widget: string, i18n: true, required: false },
-            { label: "Phone", name: "phone", widget: string , i18n: true, required: false },
-            { label: "Languages", name: "languages", widget: string, i18n: true },
-          ]
-      - file: "data/glossary.yml"
-        label: "Glossary"
-        name: "glossary"
-        i18n: true
-        fields:
-          [
-            { label: "home", name: "home", widget: string, i18n: true },
-            { label: "about", name: "about", widget: string, i18n: true },
-            { label: "product", name: "product", widget: string, i18n: true },
-            { label: "solution", name: "solution", widget: string, i18n: true },
-            { label: "news", name: "news", widget: string, i18n: true },
-            { label: "contact", name: "contact", widget: string, i18n: true },
-            { label: "list", name: "list", widget: string, i18n: true },
+            {
+              label: "Marquee Text",
+              name: "marquee",
+              widget: "string",
+              default: "Let’s get to work!\t🛠",
+            },
+            {
+              label: "Email Address",
+              name: "email",
+              widget: "string",
+              default: "hey@fran.cool",
+            },
+            {
+              label: "Signature",
+              name: "signature",
+              widget: "string",
+              default: "Fran, Creative Overthinker",
+            },
+            {
+              label: "Links",
+              name: "links",
+              widget: "list",
+              fields:
+                [
+                  { label: "Link Text", name: "text", widget: "string" },
+                  { label: "URL", name: "text", widget: "string" },
+                ],
+            },
           ]
   - name: "pages"
     label: "Pages"
-    folder: "content/english/pages"
+    folder: "content/pages"
     path: "{{slug}}"
     media_folder: "{{media_folder}}"
     public_folder: "{{public_folder}}"
@@ -158,48 +114,55 @@ collections:
         label: "modules"
         widget: "list"
         types:
-          - name: "hero"
-            label: "Hero"
+          - name: "richtext"
+            label: "Rich Text"
             widget: object
-            summary: 'Hero: {{fields.title}}'
+            summary: "{{fields.text | truncate(20, '***')}}"
             fields:
-              - name: 'title'
-                label: 'Title'
-                widget: string
-                default: "Hero Title"
-              - name: 'image'
-                title: 'Image'
-                widget: image
-          - name: "test"
-            label: 'Test'
+              - name: "text"
+                label: "Text"
+                widget: markdown
+                default: "Nisi magna id ad in proident dolore incididunt enim velit cupidatat amet et occaecat consequat."
+                modes:
+                  - rich_text
+                  - raw
+                sanitize_preview: true
+          - name: "works"
+            label: "Works"
             widget: object
-            summary: 'Test: {{fields.title}}'
+            summary: "{{fields.title}}"
             fields:
-              - name: 'title'
-                label: 'Title'
+              - name: "title"
+                label: "Title"
                 widget: string
-                default: "Hero Title"
-              - name: 'image'
-                title: 'Image'
-                widget: image
-  - name: "news"
-    label: "Articles"
-    folder: "content/english/news"
-    path: "{{slug}}"
-    media_folder: "{{media_folder}}"
-    public_folder: "{{public_folder}}"
-    create: true
-    fields:
-      [
-        { label: "Titre", name: "title", widget: "string" },
-        # { label: "Publish Date", name: "date", widget: "datetime"},
-        # { label: "Cover Image", name: "image", widget: "image" },
-        # { label: "Summary", name: "summary", widget: "text" },
-        { label: ".", name: "body", widget: "markdown" },
-      ]
-  - name: "news-fr"
-    label: "News (fr)"
-    folder: "content/fr/news"
+                default: "WORKS"
+              - name: "button"
+                title: "Button Text"
+                widget: string
+                default: "see more"
+          - name: "about"
+            label: "About"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - name: "title"
+                label: "Title"
+                widget: string
+                default: "ABOUT"
+              - name: "text"
+                label: "Text"
+                widget: markdown
+                default: "Nisi magna id ad in proident dolore incididunt enim velit cupidatat amet et occaecat consequat."
+                modes:
+                  - rich_text
+                  - raw
+                sanitize_preview: true
+              - name: "image"
+                label: "Image"
+                widget: "image"
+  - name: "works"
+    label: "Works"
+    folder: "content/works"
     path: "{{slug}}"
     media_folder: "{{media_folder}}"
     public_folder: "{{public_folder}}"
@@ -207,90 +170,55 @@ collections:
     fields:
       [
         { label: "Title", name: "title", widget: "string" },
-        { label: "Publish Date", name: "date", widget: "datetime", i18n: "duplicate" },
+        { label: "Date", name: "date", widget: "datetime" },
         { label: "Cover Image", name: "image", widget: "image" },
-        { label: "Summary", name: "summary", widget: "text" },
-        { label: "Body", name: "body", widget: "markdown" },
-      ]
-  - name: "products"
-    label: "Products (English)"
-    folder: "content/english/products"
-    path: "{{slug}}"
-    media_folder: "{{media_folder}}"
-    public_folder: "{{public_folder}}"
-    create: true
-    fields:
-      [
-        { label: "Title", name: "title", widget: "string"},
-        { label: "Category", name: "theme", widget: "select", multiple: true, options:  [
-          { label: "c1", value: "c1" },
-          { label: "c2", value: "c2" },
-          { label: "c3", value: "c3" },
-          { label: "c4", value: "c4" },
-          { label: "c5", value: "c5" },
-        ]},
-        { label: "Cover Image", name: "image", widget: "image" , media_folder: "/static/media" , public_folder: "/media" },
-        { label: "Summary", name: "summary", widget: "text" },
-        { label: "Body", name: "body", widget: "markdown" },
-      ]
-  - name: "products-fr"
-    label: "Products (fr)"
-    folder: "content/fr/products"
-    path: "{{slug}}"
-    media_folder: "{{media_folder}}"
-    public_folder: "{{public_folder}}"
-    create: true
-    fields:
-      [
-        { label: "Title", name: "title", widget: "string"},
-        { label: "Category", name: "theme", widget: "select", multiple: true, options:  [
-          { label: "c1", value: "c1" },
-          { label: "c2", value: "c2" },
-          { label: "c3", value: "c3" },
-          { label: "c4", value: "c4" },
-          { label: "c5", value: "c5" },
-        ]},
-        { label: "Cover Image", name: "image", widget: "image" , media_folder: "/static/media" , public_folder: "/media" },
-        { label: "Summary", name: "summary", widget: "text" },
-        { label: "Body", name: "body", widget: "markdown" },
-      ]
-  - name: "scene"
-    label: "Scene (English)"
-    folder: "content/english/scenes"
-    path: "{{slug}}"
-    media_folder: "{{media_folder}}"
-    public_folder: "{{public_folder}}"
-    create: true
-    fields:
-      [
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Scene", name: "scenes", widget: "select", multiple: true, options:  [
-          { label: "化工", value: "s1" },
-          { label: "食品", value: "s2" },
-          { label: "石油", value: "s3" },
-          { label: "制药", value: "s4" },
-        ]},
-        { label: "Cover Image", name: "image", widget: "image" , media_folder: "/static/media" , public_folder: "/media" },
-        { label: "Summary", name: "summary", widget: "text" },
-        { label: "Body", name: "body", widget: "markdown" },
-      ]
-  - name: "scene-fr"
-    label: "Scene (fr)"
-    folder: "content/fr/scenes"
-    path: "{{slug}}"
-    media_folder: "{{media_folder}}"
-    public_folder: "{{public_folder}}"
-    create: true
-    fields:
-      [
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Scene", name: "scenes", widget: "select", multiple: true, options:  [
-          { label: "化工", value: "s1" },
-          { label: "食品", value: "s2" },
-          { label: "石油", value: "s3" },
-          { label: "制药", value: "s4" },
-        ]},
-        { label: "Cover Image", name: "image", widget: "image" , media_folder: "/static/media" , public_folder: "/media" },
-        { label: "Summary", name: "summary", widget: "text" },
-        { label: "Body", name: "body", widget: "markdown" },
+        {
+          label: "Summary",
+          name: "summary",
+          widget: "text",
+          hint: "Used for listing pages and meta description",
+        },
+        {
+          label: "Content",
+          name: "modules",
+          widget: "list",
+          types:
+            [
+              {
+                label: "Paragraph",
+                name: "paragraph",
+                widget: object,
+                summary: "{{fields.title}}",
+                fields:
+                  [
+                    { name: "title", label: "Title", widget: string },
+                    {
+                      name: "text",
+                      label: "Text",
+                      widget: markdown,
+                      default: "Nisi magna id ad in proident dolore incididunt enim velit cupidatat amet et occaecat consequat.",
+                      modes: ["rich_text", "raw"],
+                      sanitize_preview: true,
+                    },
+                  ],
+              },
+              {
+                label: "Images",
+                name: "images",
+                widget: object,
+                summary: "{{fields[0].fields.image}}",
+                fields:
+                  [
+                    {
+                      name: "images",
+                      label: "Images",
+                      widget: list,
+                      summary: "{{fields.image}}",
+                      field: {label: Image, name: image, widget: image}
+                    },
+                  ],
+              },
+            ],
+        },
+        { label: "Project Link", name: "link", widget: "string" }
       ]
