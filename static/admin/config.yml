@@ -8,7 +8,7 @@ site_url: https://fran-cool.netlify.app/
 show_preview_links: true
 publish_mode: editorial_workflow
 editor:
-  preview: true
+  preview: false
 locale: "en"
 
 # Allow local visit
@@ -129,7 +129,7 @@ collections:
           - name: "richtext"
             label: "Rich Text"
             widget: object
-            summary: "{{fields.text | truncate(20, '***')}}"
+            summary: "{{fields.text | truncate(40, '...')}}"
             fields:
               - name: "text"
                 label: "Text"
