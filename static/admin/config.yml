@@ -32,14 +32,25 @@ collections:
   - name: "global"
     label: "Global Settings"
     files:
-      - file: "data/site.yml"
-        label: "Site"
-        name: "site"
+      - label: "Config"
+        name: "config"
+        file: "config.yaml"
         fields:
-          [
-            { label: "Site Title", name: "title", widget: "string" },
-            { label: "Favicon", name: "favicon", widget: "image" },
-          ]
+          - {label: "Title", name: title, widget: string}
+          - {label: "Base URL", name: baseURL, widget: string}
+          - {label: "Language Code", name: languageCode, widget: string}
+          - label: "Menu"
+            name: menu
+            widget: object
+            fields:
+              - label: "Main"
+                name: main
+                widget: list
+                fields:
+                  - {label: "Identifier", name: identifier, widget: string}
+                  - {label: "Name", name: name, widget: string}
+                  - {label: "URL", name: url, widget: string}
+                  - {label: "Order", name: weight, widget: number}
       - file: "data/start-screen.yml"
         label: "Start Screen"
         name: "start-screen"
@@ -58,23 +69,6 @@ collections:
               default: "COOL",
             },
             { label: "Image", name: "image", widget: "image" },
-          ]
-      - file: "data/header.yml"
-        label: "Header"
-        name: "header"
-        fields:
-          [
-            { label: "Logo", name: "logo", widget: "image" },
-            {
-              label: "Links",
-              name: "links",
-              widget: "list",
-              fields:
-                [
-                  { label: "Text", name: "text", widget: "string" },
-                  { label: "URL", name: "url", widget: "string" },
-                ],
-            },
           ]
       - file: "data/footer.yml"
         label: "Footer"

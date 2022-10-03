@@ -1,13 +1,18 @@
 baseURL: 'https://fran-cool.netlify.app/'
+title: 
 languageCode: en-us
 defaultContentLanguage: en
-Languages:
-  en:
-    languageName: En
-    languageCode: en-us
-    contentDir: content
-    weight: 1
-    mark: EN
 taxonomies:
   page: pages
   works: works
+
+menu:
+  main:
+  - identifier: pages
+    name: "index"
+    title: "index"
+    url: /
+    weight: -110
+
+params:
+  logo: https://res.cloudinary.com/dikhrro6y/image/upload/v1664819388/fran.cool-black.svg
