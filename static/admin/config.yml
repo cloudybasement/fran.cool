@@ -18,6 +18,11 @@ i18n:
   locales: [ en, fr ]
   default_locale: en
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dikhrro6y
+    api_key: 462899953829293
 
 # collections configuration
 collections:
