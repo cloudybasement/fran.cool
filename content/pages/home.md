@@ -1,4 +1,5 @@
 ---
+title: Home
 modules:
   - type: richtext
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
