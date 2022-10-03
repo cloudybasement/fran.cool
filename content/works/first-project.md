@@ -7,7 +7,7 @@ summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
   fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed
   risus. "
 modules:
-  - type: images
+  - type: gallery
     images:
       - https://res.cloudinary.com/dikhrro6y/image/upload/v1664808459/cld-sample-4.jpg
       - https://res.cloudinary.com/dikhrro6y/image/upload/v1664808458/cld-sample-2.jpg
