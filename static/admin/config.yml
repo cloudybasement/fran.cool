@@ -1,8 +1,7 @@
 # using git as backend store
 backend:
-  name: github
+  name: git-gateway
   branch: main
-  repo: cloudybasement/fran.cool
 media_folder: "/static/media" # Folder where user uploaded files should go
 public_folder: "/media"
 editor:
