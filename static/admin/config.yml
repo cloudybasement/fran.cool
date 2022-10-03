@@ -110,6 +110,9 @@ collections:
     public_folder: "{{public_folder}}"
     create: true
     fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
       - name: "modules"
         label: "modules"
         widget: "list"
