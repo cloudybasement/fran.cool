@@ -146,6 +146,42 @@ collections:
             { label: "contact", name: "contact", widget: string, i18n: true },
             { label: "list", name: "list", widget: string, i18n: true },
           ]
+  - name: "pages"
+    label: "Pages"
+    folder: "content/english/pages"
+    path: "{{slug}}"
+    media_folder: "{{media_folder}}"
+    public_folder: "{{public_folder}}"
+    create: true
+    fields:
+      - name: "modules"
+        label: "modules"
+        widget: "list"
+        types:
+          - name: "hero"
+            label: "Hero"
+            widget: object
+            summary: 'Hero: {{fields.title}}'
+            fields:
+              - name: 'title'
+                label: 'Title'
+                widget: string
+                default: "Hero Title"
+              - name: 'image'
+                title: 'Image'
+                widget: image
+          - name: "test"
+            label: 'Test'
+            widget: object
+            summary: 'Test: {{fields.title}}'
+            fields:
+              - name: 'title'
+                label: 'Title'
+                widget: string
+                default: "Hero Title"
+              - name: 'image'
+                title: 'Image'
+                widget: image
   - name: "news"
     label: "Articles"
     folder: "content/english/news"
