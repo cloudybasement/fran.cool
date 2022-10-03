@@ -215,8 +215,8 @@ collections:
                   ],
               },
               {
-                label: "Images",
-                name: "images",
+                label: "Gallery",
+                name: "gallery",
                 widget: object,
                 summary: "{{fields[0].fields.image}}",
                 fields:
