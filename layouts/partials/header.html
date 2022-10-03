@@ -1,0 +1,15 @@
+{{ $data := site.Data.header }}
+
+<header class="header">
+    <div class="logo">
+        <img src="{{ $data.logo }}" alt="" srcset="">
+    </div>
+    <nav class="navbar">
+        <ul>
+            {{ range $data.links }}
+                <li><a href="{{.url}}">{{.text}}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+    <div class="darkmode-switch"></div>
+</header>

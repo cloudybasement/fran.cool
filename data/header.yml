@@ -1,16 +1,3 @@
-en:
-  title: Hello, here is <span>Remix</span>
-  slogan: Hi there!
-  shortDescription: " Non ullamco dolor nulla do dolore consectetur elit quis. Ad
-    anim tempor sit in ullamco adipisicing ad. Laboris proident elit est
-    consequat quis ad culpa dolore voluptate occaecat ea do deserunt. Aute minim
-    est reprehenderit aliquip."
-fr:
-  title: Bonjour et <span>bienvenue!</span>
-  slogan: Entrez libre!
-  shortDescription: " Amet est do enim ea cillum adipisicing consequat cillum sint
-    tempor ea eiusmod. Adipisicing dolore culpa tempor fugiat. Veniam ex labore
-    sunt veniam aliqua id cupidatat excepteur est ipsum proident anim nisi do."
 logo: https://res.cloudinary.com/dikhrro6y/image/upload/v1664819388/fran.cool-black.svg
 links:
   - text: Works

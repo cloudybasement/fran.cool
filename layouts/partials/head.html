@@ -1,0 +1,26 @@
+{{ $data := site.Data.site }}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ .Site.Params.metaDescription }}" />
+
+    <title>{{ if $.Title }}{{ .Title }} {{ end }}{{ $data.title }}</title>
+
+    <!-- Generate CSS -->
+    {{ $options := (dict "enableSourceMap" true ) }}
+    {{ $normalizeSass := resources.Get "normalize.scss" }}
+    {{ $normalizeStyle := $normalizeSass | resources.ToCSS $options  | resources.Fingerprint }}
+
+    {{ $mainSass := resources.Get "main.scss" }}
+    {{ $mainStyle := $mainSass | resources.ToCSS $options | resources.Fingerprint }}
+
+    {{ $mainJs := resources.Get "main.js" }}
+
+    <link rel="stylesheet" href="{{ $normalizeStyle.RelPermalink }}" integrity="{{ $normalizeStyle.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}" integrity="{{ $mainStyle.Data.Integrity }}">
+
+    <script src="{{$mainJs.RelPermalink}}"></script>
+
+</head>

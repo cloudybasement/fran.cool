@@ -32,6 +32,14 @@ collections:
   - name: "global"
     label: "Global Settings"
     files:
+      - file: "data/site.yml"
+        label: "Site"
+        name: "site"
+        fields:
+          [
+            { label: "Site Title", name: "title", widget: "string" },
+            { label: "Favicon", name: "favicon", widget: "image" },
+          ]
       - file: "data/start-screen.yml"
         label: "Start Screen"
         name: "start-screen"
