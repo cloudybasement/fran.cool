@@ -1,5 +1,5 @@
 ---
-title: Message de service!
+title: Message de servic
 date: 2022-05-19T03:56:10.184Z
 image: /media/wave.jpg
 summary: Attention peinture fraiche
