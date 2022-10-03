@@ -17,13 +17,15 @@
     </h1>
     <div class="md-content">
         {{ range .Params.modules }}
-            {{ if .Params.type = "richtext" }}
-                RICHTEXT
-            {{ else if .Params.type = "works" }}
-                WORKS
-            {{ else if .Params.type = "about" }}
-                ABOUT
-            {{ end }}
+            <section class="module">
+                {{      if eq .type "richtext" }}
+                    {{ partial "modules/richtext.html" . }}
+                {{ else if eq .type "works" }}
+                    {{ partial "modules/works.html" . }}
+                {{ else if eq .type "about" }}
+                    {{ partial "modules/about.html" . }}
+                {{ end }}
+            </section>
         {{ end }}
     </div>
 </div>
