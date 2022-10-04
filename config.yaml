@@ -16,12 +16,12 @@ menu:
   - identifier: i038rh390h
     name: "Works"
     title: "works"
-    url: #works
+    url: "/#works"
     weight: 20
   - identifier: 3u9r0f30no
     name: "About"
     title: "about"
-    url: #about
+    url: "/#about"
     weight: 30
 
 params:

@@ -1,3 +1,3 @@
-<div class="richtext-module">
+<div class="richtext-module" {{ with .anchor }}id="{{ . }}"{{ end }}>
     <div class="md-content">{{ .text | markdownify}}</div>
 </div>

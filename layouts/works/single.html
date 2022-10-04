@@ -3,6 +3,7 @@
     <h1>{{ .Title }}</h1>
     <span class="work-year">{{ .Date.Format "2006" }}</span>
     <span class="work-type">{{ .Param "project-type" }}</span>
+    <img src="{{ .Params.image }}" alt="">
     <p>{{ .Summary }}</p>
         {{ range .Params.modules }}
             <section class="module">

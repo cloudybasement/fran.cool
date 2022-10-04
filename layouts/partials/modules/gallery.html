@@ -1,3 +1,5 @@
+<div class="module-gallery" {{ with .anchor }}id="{{ . }}"{{ end }}>
 {{ range .images}}
 <img src="{{ . }}">
 {{ end }}
+</div>
