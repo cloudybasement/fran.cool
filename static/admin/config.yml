@@ -53,7 +53,7 @@ collections:
             fields:
               - label: "Main"
                 name: main
-                summary: "{{ fields.name }} - {{ fields.url }}"
+                summary: "{{ name }} - {{ url }}"
                 widget: list
                 fields:
                   - {label: "Name", name: name, widget: string}
