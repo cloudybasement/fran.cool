@@ -119,7 +119,7 @@ collections:
                 ],
             },
           ]
-      - file: "data/redirects.yml"
+      - file: "data/netlifyRedirects.yml"
         label: "Redirects"
         name: "redirects"
         fields:
