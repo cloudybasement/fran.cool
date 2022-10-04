@@ -53,7 +53,7 @@ collections:
             fields:
               - label: "Main"
                 name: main
-                summary: "{{ name }} - {{ url }}"
+                summary: "{{ fields.name }}"
                 widget: list
                 fields:
                   - { label: "Name", name: name, widget: string }
@@ -78,18 +78,6 @@ collections:
               allow_multiple: false,
             },
           ]
-      - file: "data/redirects.yml"
-        label: "Redirects"
-        name: "redirects"
-        fields:
-          - name: "redirects"
-            label: "Redirects"
-            widget: list
-            fields:
-              [
-                { label: "From", name: "from", widget: "string" },
-                { label: "To", name: "to", widget: "string" },
-              ]
       - file: "data/footer.yml"
         label: "Footer"
         name: "footer"
@@ -131,6 +119,18 @@ collections:
                 ],
             },
           ]
+      - file: "data/redirects.yml"
+        label: "Redirects"
+        name: "redirects"
+        fields:
+          - name: "redirects"
+            label: "Redirects"
+            widget: list
+            fields:
+              [
+                { label: "From", name: "from", widget: "string" },
+                { label: "To", name: "to", widget: "string" },
+              ]
   - name: "pages"
     label: "Pages"
     folder: "content/pages"
