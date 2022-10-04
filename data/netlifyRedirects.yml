@@ -1,4 +1,5 @@
-- from: /pages/home
-  to: /
-- from: /test1
-  to: /test2
+redirects:
+  - from: /pages/home
+    to: /
+  - from: /test1
+    to: /test2
