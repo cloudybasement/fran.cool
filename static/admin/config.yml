@@ -53,12 +53,13 @@ collections:
             fields:
               - label: "Main"
                 name: main
+                summary: "{{ fields.name }} - {{ fields.url }}"
                 widget: list
                 fields:
-                  - {label: "ID", name: identifier, widget: uuid}
                   - {label: "Name", name: name, widget: string}
                   - {label: "URL", name: url, widget: string}
                   - {label: "Order", name: weight, widget: number}
+                  - {label: "ID", name: identifier, widget: uuid}
       - file: "data/start-screen.yml"
         label: "Start Screen"
         name: "start-screen"
