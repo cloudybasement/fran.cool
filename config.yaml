@@ -1,5 +1,5 @@
 baseURL: 'https://fran-cool.netlify.app/'
-title: 
+title: fran.cool
 languageCode: en-us
 defaultContentLanguage: en
 taxonomies:
@@ -26,3 +26,19 @@ menu:
 
 params:
   logo: https://res.cloudinary.com/dikhrro6y/image/upload/v1664819388/fran.cool-black.svg
+
+mediaTypes:
+  text/x-netlify:
+    suffixes: []
+
+outputFormats:
+  redirects:
+    baseName: _redirects
+    isPlainText: true
+    mediaType: text/x-netlify
+    ugly: true
+
+outputs:
+  home:
+  - HTML
+  - redirects

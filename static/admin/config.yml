@@ -68,6 +68,17 @@ collections:
             { label: "Background Graphic", name: "background", widget: "image", allow_multiple: false },
             { label: "Image", name: "image", widget: "image", allow_multiple: false },
           ]
+      - file: "data/redirects.yml"
+        label: "Redirects"
+        name: "redirects"
+        fields:
+          - name: "redirects"
+            label: "Redirects"
+            widget: list
+            fields: [
+                  { label: "From", name: "from", widget: "string" },
+                  { label: "To", name: "to", widget: "string" },
+                ]
       - file: "data/footer.yml"
         label: "Footer"
         name: "footer"

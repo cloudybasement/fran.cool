@@ -30,9 +30,13 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 7rem;
 }
 
 p {
@@ -164,9 +168,8 @@ footer.footer {
         text-align: center;
         font-size: 17rem;
         line-height: 1;
-        color: var(--color-background);
+        color: transparent;
         -webkit-text-stroke: 1px var(--color-text);
-        text-transform: uppercase;
     }
 }
 

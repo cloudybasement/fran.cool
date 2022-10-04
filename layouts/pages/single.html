@@ -1,13 +1,19 @@
 {{ define "main" }}
-        {{ range .Params.modules }}
-            <section class="module">
-                {{      if eq .type "richtext" }}
-                    {{ partial "modules/richtext.html" . }}
-                {{ else if eq .type "works" }}
-                    {{ partial "modules/works.html" . }}
-                {{ else if eq .type "about" }}
-                    {{ partial "modules/about.html" . }}
-                {{ end }}
-            </section>
+  {{ $page := .Page }}
+  {{ if .IsHome}}
+    {{ $page = .Site.GetPage "/pages/home"}}
+  {{end}}
+  {{with $page }}
+    {{ range .Params.modules }}
+    <section class="module">
+        {{      if eq .type "richtext" }}
+            {{ partial "modules/richtext.html" . }}
+        {{ else if eq .type "works" }}
+            {{ partial "modules/works.html" . }}
+        {{ else if eq .type "about" }}
+            {{ partial "modules/about.html" . }}
         {{ end }}
+    </section>
+    {{ end }}
+  {{ end }}
 {{ end }}

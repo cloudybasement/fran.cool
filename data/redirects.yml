@@ -1,0 +1,4 @@
+- from: /pages/home
+  to: /
+- from: /test1
+  to: /test2

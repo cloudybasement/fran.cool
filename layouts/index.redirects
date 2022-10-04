@@ -1,0 +1,2 @@
+{{ $data := .Site.Data.redirects }}{{ range $data }}{{ .from | plainify}} {{ .to | plainify}}
+{{ end }}

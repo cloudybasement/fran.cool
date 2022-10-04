@@ -1,9 +1,1 @@
-{{ define "main" }}
-  {{ range first 6 (where site.RegularPages "Type" "==" "pages")}}
-
-  <a class="new" href="{{ .RelPermalink }}">
-    <h4>{{ .Title }}</h4>
-  </a>
-
-  {{ end }}
-{{ end }}
+./pages/single.html

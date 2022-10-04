@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <a href="/" class="work-back">Back</a>
+    <h1>{{ .Title }}</h1>
+    <span class="work-year">{{ .Date.Format "2006" }}</span>
+    <span class="work-type">{{ .Param "project-type" }}</span>
+    <p>{{ .Summary }}</p>
+        {{ range .Params.modules }}
+            <section class="module">
+                {{      if eq .type "gallery" }}
+                    {{ partial "modules/gallery.html" . }}
+                {{ else if eq .type "paragraph" }}
+                    {{ partial "modules/paragraph.html" . }}
+                {{ end }}
+            </section>
+        {{ end }}
+{{ end }}
