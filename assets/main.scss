@@ -5,20 +5,17 @@
 // COLORS
 :root {
   --color-background: #fff;
-  --color-text: #000;
+  --color-text: #232323;
   --color-accent: #817638;
-  --color-grey0: #f8f8f8;
-  --color-grey-1: #f8f8f8;
-  --color-grey-2: #f8f8f8;
-  --color-grey-3: #f8f8f8;
-  --color-grey-4: #454e56;
-  --color-grey-5: #2a2e35;
-  --color-grey-6: #12181b;
+  --color-grey: #515151;
+  --font-body: "GeneralSans", 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-heading: Impact;
 }
 
 .dark-mode {
-  --color-background: #000;
+  --color-background: #232323;
   --color-text: #fff;
+  --color-grey: #969696;
 }
 
 body {
@@ -29,13 +26,13 @@ body {
 // TYPO
 
 body {
-  font-family: "GeneralSans", monospace;
+  font-family: var(--font-body);
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Impact";
+  font-family: var(--font-heading);
 }
 
 p {
@@ -182,6 +179,52 @@ footer.footer {
 // RICHTEXT MODULE
 .richtext-module {
     padding: 0 14.0625rem;
+}
+
+// WORKS MODULE
+.works-module {
+  .works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 1.25rem;
+    a.works-link {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: var(--color-text);
+      position: relative;
+      img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 650 / 384;
+      }
+      h3 {
+        font-family: var(--font-body);
+        font-weight: 400;
+      }
+      span {
+        color: var(--color-grey);
+      }
+      button {
+        height: 10.75rem;
+        width: 10.75rem;
+        border-radius: 50%;
+        font-weight: 700;
+        background-color: white;
+        mix-blend-mode: difference;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 0;
+        transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      &:hover button {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // ABOUT MODULE

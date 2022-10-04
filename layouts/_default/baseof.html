@@ -9,6 +9,7 @@
     <title>{{ block "title" . }}
         {{ with .Page.Title }}{{ . }} | {{ end }}{{ .Site.Title }}
     {{ end }}</title>
+    <link rel="preconnect" href="https://res.cloudinary.com">
     <!-- Generate CSS -->
     {{ $options := (dict "enableSourceMap" true ) }}
     {{ $normalizeSass := resources.Get "normalize.scss" }}
@@ -17,12 +18,13 @@
     {{ $mainSass := resources.Get "main.scss" }}
     {{ $mainStyle := $mainSass | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $options | resources.Fingerprint }}
 
-    {{ $mainJs := resources.Get "main.js" }}
+    {{ $mainJs := resources.Get "main-head.js"}}
+    {{ $mainJs = $mainJs | resources.Fingerprint }}
 
-    <link rel="stylesheet" href="{{ $normalizeStyle.RelPermalink }}" >{{/*   integrity="{{ $normalizeStyle.Data.Integrity }}"  */}}
-    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}" > {{/*  integrity="{{ $mainStyle.Data.Integrity }}"  */}}
+    <link rel="stylesheet" href="{{ $normalizeStyle.RelPermalink }}" integrity="{{ $normalizeStyle.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}"  integrity="{{ $mainStyle.Data.Integrity }}">
 
-    <script src="{{$mainJs.RelPermalink}}"></script>
+    <script src="{{$mainJs.RelPermalink}}" integrity="{{ $mainJs.Data.Integrity }}"></script>
   </head>
   <body>
     {{ block "header" . }}

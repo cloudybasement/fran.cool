@@ -180,6 +180,7 @@ collections:
     fields:
       [
         { label: "Title", name: "title", widget: "string" },
+        { label: "Project Type", name: "project-type", widget: "string" },
         { label: "Date", name: "date", widget: "datetime" },
         { label: "Cover Image", name: "image", widget: "image" },
         {

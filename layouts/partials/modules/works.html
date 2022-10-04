@@ -1,2 +1,15 @@
-<h2>{{ .title }}</h2>
-<button>{{ .button }}</button>
+<div class="works-module">
+    <div class="bg-title">
+        <h2>{{ .title }}</h2>
+    </div>
+    <div class="works-grid">
+        {{ range where site.RegularPages "Type" "==" "works"}}
+            <a class="works-link" href="{{ .RelPermalink }}">
+                <img class="works-image" src="{{ .Params.image }}" width="650" height="384">
+                <h3 class="works-title">{{ .Title }}</h3>
+                <span class="works-type">{{ .Param "project-type" }}</span>
+                <button class="works-button">{{ $.button }}</button>
+            </a>
+        {{ end }}
+    </div>
+</div>
