@@ -2,6 +2,7 @@
 title: Third Project
 project-type: Design - Strategy - Copywriting
 date: 2022-10-04T18:24:07.347Z
+weight: 30
 image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664907793/Rectangle_2_k94alq.jpg
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
   turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec

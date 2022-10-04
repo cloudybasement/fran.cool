@@ -183,7 +183,7 @@ collections:
         { label: "Title", name: "title", widget: "string" },
         { label: "Project Type", name: "project-type", widget: "string" },
         { label: "Date", name: "date", widget: "datetime" },
-        { label: "Sort Order", hint: "Order for listing and next button (Lower comes first)", name: "value", widget: "number", value_type: "int"},
+        { label: "Sort Order", hint: "Order for listing and next button (Lower comes first)", name: "weight", widget: "number", value_type: "int"},
         { label: "Cover Image", name: "image", widget: "image" },
         {
           label: "Summary",

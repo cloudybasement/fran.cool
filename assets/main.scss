@@ -54,7 +54,7 @@ body {
 
 main.main {
   box-sizing: border-box;
-  width: clamp(220px, 100%, 1425px);
+  width: clamp(220px, 94%, 1320px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -178,7 +178,7 @@ footer.footer {
 
 // RICHTEXT MODULE
 .richtext-module {
-    padding: 0 14.0625rem;
+    padding: 0 13.75rem;
 }
 
 // WORKS MODULE
@@ -186,8 +186,14 @@ footer.footer {
   .works-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem 1.25rem;
+    grid-auto-rows: 0;
+    gap: 1rem 1.25rem;
     a.works-link {
+      grid-row-end: span 30;
+      &:nth-child(2) {
+        margin-top: 6rem;
+        grid-row-end: span 36;
+      }
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
@@ -196,7 +202,6 @@ footer.footer {
       img {
         width: 100%;
         object-fit: cover;
-        aspect-ratio: 650 / 384;
       }
       h3 {
         font-family: var(--font-body);

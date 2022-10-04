@@ -2,6 +2,7 @@
 title: First Project
 project-type: Design
 date: 2022-10-03T17:55:31.585Z
+weight: 10
 image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-5.jpg
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
   turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
