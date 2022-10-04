@@ -8,11 +8,21 @@ taxonomies:
 
 menu:
   main:
-  - identifier: pages
-    name: "index"
-    title: "index"
+  - identifier: 090f398h
+    name: "Home"
+    title: "home"
     url: /
-    weight: -110
+    weight: 10
+  - identifier: i038rh390h
+    name: "Works"
+    title: "works"
+    url: #works
+    weight: 20
+  - identifier: 3u9r0f30no
+    name: "About"
+    title: "about"
+    url: #about
+    weight: 30
 
 params:
   logo: https://res.cloudinary.com/dikhrro6y/image/upload/v1664819388/fran.cool-black.svg

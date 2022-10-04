@@ -1,1 +1,34 @@
-FOOTER
+{{ $data := site.Data.footer }}
+<footer class="footer">
+    <div class="footer-marquee">
+        <div class="footer-marquee-text">
+            {{ range seq 10 }}
+                {{ $data.marquee | htmlUnescape }}
+            {{ end }}
+        </div>
+    </div>
+    <div class="footer-email">
+        <a class="eml-protected" href="#">{{ $data.email }}</a>
+        <script>
+            var allElements = document.getElementsByClassName("eml-protected");
+            for (var i = 0; i < allElements.length; i++) {
+                updateAnchor(allElements[i])
+            }
+            
+            function updateAnchor(el) {
+                var encoded = el.innerHTML;
+                var decoded = decodeEmail(encoded);
+                el.textContent = decoded;
+                el.href = 'mailto:' + decoded;
+            }
+        </script>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-signature">{{ $data.signature }}</div>
+        <div class="footer-links">
+            {{ range $data.links }}
+                <a href="{{ .url }}" target="_blank">{{ .text }}</a>
+            {{ end }}
+        </div>
+    </div>
+</footer>

@@ -1,27 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{{ define "main" }}
+  {{ range first 6 (where site.RegularPages "Type" "==" "pages")}}
 
-<!-- head link and script -->
-{{ partial "head.html" .}}
+  <a class="new" href="{{ .RelPermalink }}">
+    <h4>{{ .Title }}</h4>
+  </a>
 
-<body>
-    <!-- navigation header -->
-    {{ partial "header.html" .}}
-
-    <!-- section list -->
-    <div class="main-content">
-        {{ range first 6 (where site.RegularPages "Type" "==" "pages")}}
-
-        <a class="new" href="{{ .RelPermalink }}">
-                <h4>{{ .Title }}</h4>
-        </a>
-
-        {{ end }}
-    </div>
-
-    <!-- footer copyright -->
-    {{ partial "footer.html" .}}
-
-</body>
-
-</html>
+  {{ end }}
+{{ end }}

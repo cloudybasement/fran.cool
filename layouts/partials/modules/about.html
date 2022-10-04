@@ -1,3 +1,9 @@
-<h2>{{ .title }}</h2>
-<div class="md-content">{{ .text | markdownify }}</div>
-<img src="{{ .image }}" alt="" srcset="">
+<div class="about-module">
+    <div class="bg-title">
+        <h2>{{ .title }}</h2>
+    </div>
+    <div class="sbs-content">
+        <img src="{{ .image }}" alt=""/>
+        <div class="md-content">{{ .text | markdownify }}</div>
+    </div>
+</div>

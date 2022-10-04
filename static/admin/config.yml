@@ -39,6 +39,14 @@ collections:
           - {label: "Title", name: title, widget: string}
           - {label: "Base URL", name: baseURL, widget: string}
           - {label: "Language Code", name: languageCode, widget: string}
+          - label: "Parameters"
+            name: params
+            widget: object
+            fields:
+              - label: "Logo"
+                name: logo
+                widget: image
+                allow_multiple: false
           - label: "Menu"
             name: menu
             widget: object
@@ -47,7 +55,7 @@ collections:
                 name: main
                 widget: list
                 fields:
-                  - {label: "Identifier", name: identifier, widget: string}
+                  - {label: "ID", name: identifier, widget: uuid}
                   - {label: "Name", name: name, widget: string}
                   - {label: "URL", name: url, widget: string}
                   - {label: "Order", name: weight, widget: number}
@@ -56,19 +64,8 @@ collections:
         name: "start-screen"
         fields:
           [
-            {
-              label: "Title Top",
-              name: "title-top",
-              widget: string,
-              default: "fran is",
-            },
-            {
-              label: "Title Bottom",
-              name: "title-bottom",
-              widget: string,
-              default: "COOL",
-            },
-            { label: "Image", name: "image", widget: "image" },
+            { label: "Background Graphic", name: "background", widget: "image", allow_multiple: false },
+            { label: "Image", name: "image", widget: "image", allow_multiple: false },
           ]
       - file: "data/footer.yml"
         label: "Footer"
@@ -79,7 +76,14 @@ collections:
               label: "Marquee Text",
               name: "marquee",
               widget: "string",
-              default: "Let’s get to work!\t🛠",
+              default: "Let’s get to work!&emsp;&emsp;&emsp;🛠&emsp;&emsp;&emsp;",
+            },
+            {
+              label: "Marquee Animation Duration",
+              name: "duration",
+              widget: "number",
+              value_type: "float",
+              default: "5",
             },
             {
               label: "Email Address",
