@@ -19,8 +19,8 @@
 
     {{ $mainJs := resources.Get "main.js" }}
 
-    <link rel="stylesheet" href="{{ $normalizeStyle.RelPermalink }}" integrity="{{ $normalizeStyle.Data.Integrity }}">
-    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}" integrity="{{ $mainStyle.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $normalizeStyle.RelPermalink }}" >{{/*   integrity="{{ $normalizeStyle.Data.Integrity }}"  */}}
+    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}" > {{/*  integrity="{{ $mainStyle.Data.Integrity }}"  */}}
 
     <script src="{{$mainJs.RelPermalink}}"></script>
   </head>
