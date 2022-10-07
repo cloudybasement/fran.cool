@@ -34,9 +34,9 @@
     {{ $mainAsyncJs = $mainAsyncJs | resources.Fingerprint }}
     <script async src="{{$mainAsyncJs.RelPermalink}}" integrity="{{ $mainAsyncJs.Data.Integrity }}"></script>  */}}
 
-    {{ $mainDeferJs := resources.Get "main-defer.js"}}
+    {{/*  {{ $mainDeferJs := resources.Get "main-defer.js"}}
     {{ $mainDeferJs = $mainDeferJs | resources.Fingerprint }}
-    <script defer src="{{$mainDeferJs.RelPermalink}}" integrity="{{ $mainDeferJs.Data.Integrity }}"></script>
+    <script defer src="{{$mainDeferJs.RelPermalink}}" integrity="{{ $mainDeferJs.Data.Integrity }}"></script>  */}}
 
   </head>
   <body>
@@ -53,5 +53,9 @@
     {{ block "footer" . }}
         {{ partial "footer.html" .}}
     {{ end }}
+
+    {{ $mainEndJs := resources.Get "main-end.js"}}
+    {{ $mainEndJs = $mainEndJs | resources.Fingerprint }}
+    <script defer src="{{$mainEndJs.RelPermalink}}" integrity="{{ $mainEndJs.Data.Integrity }}"></script>
   </body>
 </html>
