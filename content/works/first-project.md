@@ -30,4 +30,5 @@ modules:
       Maecenas eget condimentum velit, sit amet feugiat lectus.
     title: Lorem Ipsum
 link: https://fran.cool/
+gifv: https://media.giphy.com/media/qgri3D9sTwCUGMcT8L/giphy.mp4
 ---

@@ -23,6 +23,7 @@ i18n:
 
 media_library:
   name: cloudinary
+  output_filename_only: true
   config:
     cloud_name: dikhrro6y
     api_key: 462899953829293
@@ -312,4 +313,5 @@ collections:
             ],
         },
         { label: "Project Link", name: "link", widget: "string" },
+        { label: "Next Button GIFV", name: "gifv", widget: "file", hint: "Insert video file as Mp4 or WEBM"}
       ]

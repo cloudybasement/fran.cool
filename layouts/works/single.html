@@ -1,17 +1,54 @@
 {{ define "main" }}
-    <a href="/" class="work-back">Back</a>
-    <h1>{{ .Title }}</h1>
-    <span class="work-year">{{ .Date.Format "2006" }}</span>
-    <span class="work-type">{{ .Param "project-type" }}</span>
-    <img src="{{ .Params.image }}" alt="">
-    <p>{{ .Summary }}</p>
-        {{ range .Params.modules }}
-            <section class="module">
-                {{      if eq .type "gallery" }}
-                    {{ partial "modules/gallery.html" . }}
-                {{ else if eq .type "paragraph" }}
-                    {{ partial "modules/paragraph.html" . }}
-                {{ end }}
-            </section>
-        {{ end }}
+    <section>
+        <a href="/" class="work-back">
+            <svg width="18" height="18" viewBox="0 0 6 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 1L1 9L5 17" stroke="var(--color-text)"/>
+            </svg>
+            Back
+        </a>
+        <div class="work-title-row">
+            <h1 class="work-title">{{ .Title }}</h1>
+            <span class="work-year">{{ .Date.Format "2006" }}</span>
+        </div>
+        <span class="work-type">{{ .Param "project-type" }}</span>
+        <img src="{{ .Params.image }}" alt="" class="work-featured-image">
+    </section>
+    {{ range .Params.modules }}
+        <section class="work-module">
+            {{      if eq .type "gallery" }}
+                {{ partial "modules/gallery.html" . }}
+            {{ else if eq .type "paragraph" }}
+                {{ partial "modules/paragraph.html" . }}
+            {{ end }}
+        </section>
+    {{ end }}
+    {{ with .Params.link }}
+    <section>
+        <div class="work-live-site">
+            <a href="{{ . }}">visit live site&nbsp;<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.2496 1.52418C18.263 1.11018 17.9382 0.763746 17.5242 0.75039L10.7777 0.532763C10.3637 0.519407 10.0173 0.844193 10.0039 1.25819C9.99054 1.67219 10.3153 2.01863 10.7293 2.03198L16.7262 2.22543L16.5328 8.22231C16.5194 8.63631 16.8442 8.98275 17.2582 8.9961C17.6722 9.00946 18.0186 8.68467 18.032 8.27067L18.2496 1.52418ZM2.01296 17.0472L18.013 2.04715L16.987 0.952848L0.987044 15.9528L2.01296 17.0472Z" fill="var(--color-text)"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+    {{ end }}
+    <section class="work-next-section">
+        <a class="works-link hover-invert-button-trigger"
+            {{ with .PrevInSection }}
+                href="{{.RelPermalink}}"
+            {{ else }}
+                href="{{ range first 1 (where site.RegularPages "Type" "==" "works")}}{{ .RelPermalink }}{{ end }}"
+            {{ end }}>
+            <div class="bg-title">
+                <span class="h2">Next</span>
+            </div>
+            <div class="work-next-gif">
+                <video autoplay loop muted playsinline disablepictureinpicture>
+                    {{/*  <source src="my-animation.webm" type="video/webm">  */}}
+                    <source src="{{ .Params.gifv }}" type="video/mp4">
+                </video>
+            </div>
+            <button class="hover-invert-button">next</button>
+        </a>
+    </section>
 {{ end }}

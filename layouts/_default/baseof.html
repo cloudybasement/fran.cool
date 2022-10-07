@@ -22,13 +22,22 @@
     {{ $mainSass := resources.Get "main.scss" }}
     {{ $mainStyle := $mainSass | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $options | resources.Fingerprint }}
 
-    {{ $mainJs := resources.Get "main-head.js"}}
-    {{ $mainJs = $mainJs | resources.Fingerprint }}
-
     <link rel="stylesheet" href="{{ $normalizeStyle.RelPermalink }}" integrity="{{ $normalizeStyle.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}"  integrity="{{ $mainStyle.Data.Integrity }}">
 
+    
+    {{ $mainJs := resources.Get "main-head.js"}}
+    {{ $mainJs = $mainJs | resources.Fingerprint }}
     <script src="{{$mainJs.RelPermalink}}" integrity="{{ $mainJs.Data.Integrity }}"></script>
+
+    {{/*  {{ $mainAsyncJs := resources.Get "main-async.js"}}
+    {{ $mainAsyncJs = $mainAsyncJs | resources.Fingerprint }}
+    <script async src="{{$mainAsyncJs.RelPermalink}}" integrity="{{ $mainAsyncJs.Data.Integrity }}"></script>  */}}
+
+    {{ $mainDeferJs := resources.Get "main-defer.js"}}
+    {{ $mainDeferJs = $mainDeferJs | resources.Fingerprint }}
+    <script defer src="{{$mainDeferJs.RelPermalink}}" integrity="{{ $mainDeferJs.Data.Integrity }}"></script>
+
   </head>
   <body>
     {{ block "header" . }}
