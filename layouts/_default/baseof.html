@@ -40,6 +40,8 @@
 
   </head>
   <body>
+    {{ block "intro" . }}
+    {{ end }}
     {{ block "header" . }}
         {{ partial "header.html" .}}
     {{ end }}

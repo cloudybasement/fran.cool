@@ -32,8 +32,8 @@
         </div>
     </section>
     {{ end }}
-    <section class="work-next-section">
-        <a class="works-link hover-invert-button-trigger"
+    <section class="work-next-section relative">
+        <a class="works-link"
             {{ with .PrevInSection }}
                 href="{{.RelPermalink}}"
             {{ else }}
@@ -42,13 +42,15 @@
             <div class="bg-title">
                 <span class="h2">Next</span>
             </div>
-            <div class="work-next-gif">
+            <div class="work-next-gif hover-invert-button-frame">
                 <video autoplay loop muted playsinline disablepictureinpicture>
                     {{/*  <source src="my-animation.webm" type="video/webm">  */}}
                     <source src="{{ .Params.gifv }}" type="video/mp4">
                 </video>
             </div>
-            <button class="hover-invert-button">next</button>
+            <div class="hover-invert-button-trigger">
+                <button class="hover-invert-button">next</button>
+            </div>
         </a>
     </section>
 {{ end }}

@@ -63,6 +63,7 @@ main.main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-background);
 }
 
 section {
@@ -75,8 +76,11 @@ section.work-module {
 
 // HEADER
 header.header {
+  position: sticky;
+  top:0;
+  z-index: 100;
   display: flex;
-  background-color: var(--background-color);
+  background-color: var(--color-background);
   width: 100%;
   height: 11.875rem;
   box-sizing: border-box;
@@ -189,6 +193,10 @@ footer.footer {
 }
 
 // SHARED ELEMENTS
+.relative {
+  position: relative;
+}
+
 .bg-title {
     width: 100%;
     margin-bottom: -4.5rem;
@@ -211,8 +219,10 @@ footer.footer {
 }
 
 .hover-invert-button-trigger {
-  position: relative;
-  .hover-invert-button {
+  position: absolute;
+  inset: -3rem;
+  cursor: none;
+  button {
     height: 10.75rem;
     width: 10.75rem;
     border-radius: 50%;
@@ -221,15 +231,47 @@ footer.footer {
     color: black;
     mix-blend-mode: difference;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.3);
+    top: 0;
+    left: 0;
+    z-index: 1;
     opacity: 0;
-    transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    pointer-events: none;
+    cursor: none;
+    // --translateX: calc(50%-10.75/2);
+    // --translateY: calc(50%-10.75/2);
+    transform: translate(var(--translateX), var(--translateY));
+    transition: opacity .3s ease;
   }
-  &:hover .hover-invert-button {
-    transform: translate(-50%, -50%);
+  &:hover button {
+    // transform: translate(-50%, -50%);
+    transform: translate(var(--translateX), var(--translateY));
+    transition: opacity .3s ease;
     opacity: 1;
+  }
+}
+
+// HOME PAGE
+section.intro{
+  z-index: -10;
+  padding: 2.75rem 0;
+  min-height: 100vh;
+  width: clamp(220px, 94%, 1320px);
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  div.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img.intro-logo {
+      margin-bottom: -16rem;
+      width: 100%;
+      height: auto;
+    }
+    img.intro-image {
+      width: 86.7%;
+      height: auto;
+    }
   }
 }
 

@@ -1,3 +1,15 @@
+{{ define "intro" }}
+  {{ if .IsHome}}
+    {{ $data := site.Data.startScreen }}
+    <section class="intro" id="intro">
+      <div class="intro-container">
+        <img class="intro-logo" src="{{ $data.background }}" alt="">
+        <img class="intro-image" src="{{ $data.image }}" alt="">
+      </div>
+    </section>
+  {{ end }}
+{{end}}
+
 {{ define "main" }}
   {{ $page := .Page }}
   {{ if .IsHome}}

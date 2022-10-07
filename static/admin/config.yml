@@ -61,7 +61,7 @@ collections:
                   - { label: "URL", name: url, widget: string }
                   - { label: "Order", name: weight, widget: number }
                   - { label: "ID", name: identifier, widget: uuid }
-      - file: "data/start-screen.yml"
+      - file: "data/startScreen.yml"
         label: "Start Screen"
         name: "start-screen"
         fields:
