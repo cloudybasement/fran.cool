@@ -8,11 +8,6 @@ taxonomies:
 
 menu:
   main:
-  - identifier: 090f398h
-    name: "Home"
-    title: "home"
-    url: /
-    weight: 10
   - identifier: i038rh390h
     name: "Works"
     title: "works"

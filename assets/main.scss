@@ -90,16 +90,26 @@ header.header {
   align-items: center;
   justify-content: space-between;
   padding: 4.375rem 3.75rem;
+  @media screen and (max-width: 48rem) {
+    padding: 2rem 1.25rem;
+    font-size: 0.875rem;
+  }
 
   div.logo {
     width: 18.25rem;
-    height: 3.25rem;
+    @media screen and (max-width: 48rem) {
+      width: 8.0625rem;
+    }
+    
   }
 
   nav.navbar ul {
     display: flex;
     gap: 2rem;
     align-items: center;
+    @media screen and (max-width: 48rem) {
+      gap: 1.25rem
+    }
     li {
       a {
         color: var(--color-text);
@@ -114,6 +124,10 @@ header.header {
         background-repeat: no-repeat;
         cursor: pointer;
         position: relative;
+        @media screen and (max-width: 48rem) {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
         &::before {
           content: '';
           position: absolute;
@@ -182,18 +196,32 @@ footer.footer {
             text-underline-offset: .5rem;
             color: var(--color-text);
         }
+        @media screen and (max-width: 48rem) {
+          font-size: 10vw;
+        }
     }
     div.footer-bottom {
         padding: 0 3.75rem 2rem 3.75rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media screen and (max-width: 48rem) {
+          justify-content: center;
+        }
+        .footer-signature {
+          @media screen and (max-width: 48rem) {
+            display: none;
+          }
+        }
         .footer-links {
             display: flex;
             gap: 1.5625rem;
             a {
                 color: var(--color-text);
             }
+        }
+        @media screen and (max-width: 48rem) {
+          padding: 0 2% 1rem 2%;
         }
     }
 }
@@ -204,24 +232,30 @@ footer.footer {
 }
 
 .bg-title {
-    width: 100%;
-    margin-bottom: -4.5rem;
-    h2, span {
-        text-align: center;
-        font-size: 17rem;
-        line-height: 1;
-        color: var(--color-background);
-        text-shadow: 1px 0px var(--color-text), 1px 1px var(--color-text),
-                     0px 1px var(--color-text), -1px 1px var(--color-text),
-                     -1px 0px var(--color-text), -1px -1px var(--color-text),
-                     0px -1px var(--color-text), 1px -1px var(--color-text);
+  width: 100%;
+  margin-bottom: -4.5rem;
+  h2, span {
+    text-align: center;
+    font-size: 17rem;
+    line-height: 1;
+    color: var(--color-background);
+    text-shadow: 1px 0px var(--color-text), 1px 1px var(--color-text),
+                  0px 1px var(--color-text), -1px 1px var(--color-text),
+                  -1px 0px var(--color-text), -1px -1px var(--color-text),
+                  0px -1px var(--color-text), 1px -1px var(--color-text);
+    @media screen and (max-width: 48rem) {
+      font-size: 30vw;
     }
+  }
 }
 
 .sbs-content {
     display: grid;
     gap: 3.25rem;
     grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 48rem) {
+      grid-template-columns: 1fr;
+    }
 }
 
 .hover-invert-button-trigger {
@@ -285,6 +319,9 @@ section.intro{
       }
     }
   }
+  @media screen and (max-width: 48rem) {
+    padding: 1.5rem 0;
+  }
 }
 
 // WORK DETAIL PAGE
@@ -344,11 +381,19 @@ section.work-next-section {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 0;
     gap: 1rem 1.25rem;
+    @media screen and (max-width: 48rem) {
+      grid-template-columns: 1fr;
+    }
     a.works-link {
       grid-row-end: span 30;
+      @media screen and (max-width: 48rem) {
+        grid-row-end: span 32;
+      }
       &:nth-child(2) {
-        margin-top: 6rem;
-        grid-row-end: span 36;
+        @media screen and (min-width: 48rem) {
+          margin-top: 6rem;
+          grid-row-end: span 36;
+        }
       }
       display: flex;
       flex-direction: column;
@@ -378,6 +423,9 @@ section.work-next-section {
     }
     .md-content {
         margin-top: 9rem;
+        @media screen and (max-width: 48rem) {
+          margin-top: 1rem;
+        }
     }
 }
 
