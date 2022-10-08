@@ -25,6 +25,7 @@ if(followButtonCards){
 
 // Intro scroll slide
 let introSlide = document.getElementById('intro');
+console.log(introSlide);
 if(introSlide){
     if(document.documentElement.scrollTop-introSlide.getBoundingClientRect().height+window.innerHeight>0){
         console.log(document.documentElement.scrollTop-introSlide.getBoundingClientRect().height+window.innerHeight);
@@ -34,14 +35,12 @@ if(introSlide){
         })
     }
     document.addEventListener("scroll", () => {
-        if(document.documentElement.scrollTop-introSlide.getBoundingClientRect().height+window.innerHeight<0){
+        let scrollThreshold = document.documentElement.scrollTop-introSlide.getBoundingClientRect().height+window.innerHeight;
+        console.log(scrollThreshold)
+        if(scrollThreshold<0){
             window.requestAnimationFrame(() => {
                 introSlide.style.transform = `translateY(${-document.documentElement.scrollTop}px)`
             })
         }
-        //console.log(document.documentElement.scrollTop, introSlide.getBoundingClientRect().height);
-        //if(document.documentElement.scrollTop>introSlide.getBoundingClientRect().height){
-        //    introSlide.style.display = 'none'
-        //}
     })
 }
