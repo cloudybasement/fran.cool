@@ -448,7 +448,7 @@ section.work-next-section {
     a.works-link {
       grid-row-end: span 34;
       @media screen and (max-width: 48rem) {
-        grid-row-end: span 34;
+        grid-row-end: span 20;
       }
       &:nth-child(2) {
         @media screen and (min-width: 48rem) {
