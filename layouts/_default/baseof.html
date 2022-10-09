@@ -16,33 +16,31 @@
     {{ end }}</title>
     <link rel="preconnect" href="https://res.cloudinary.com">
     <!-- Generate CSS -->
-    {{ $options := (dict "enableSourceMap" true ) }}
+    {{ $cssOptions := (dict "enableSourceMap" true ) }}
     {{ $normalizeSass := resources.Get "normalize.scss" }}
-    {{ $normalizeStyle := $normalizeSass | resources.ToCSS $options  | resources.Fingerprint }}
+    {{ $normalizeStyle := $normalizeSass | resources.ToCSS $cssOptions  | resources.Fingerprint }}
 
     {{ $mainSass := resources.Get "main.scss" }}
-    {{ $mainStyle := $mainSass | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $options | resources.Fingerprint }}
+    {{ $mainStyle := $mainSass | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $cssOptions | resources.Fingerprint }}
 
     <link rel="stylesheet" href="{{ $normalizeStyle.RelPermalink }}" integrity="{{ $normalizeStyle.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}"  integrity="{{ $mainStyle.Data.Integrity }}">
-
     
-    {{ $mainJs := resources.Get "main-head.js"}}
-    {{ $mainJs = $mainJs | resources.Fingerprint }}
-    <script src="{{$mainJs.RelPermalink}}" integrity="{{ $mainJs.Data.Integrity }}"></script>
+    <!-- Generate JavaScript -->
+    {{ $jsOptions := (dict "minify" true "sourceMap" "external" "target" "es2015") }}
+    
+    {{/*  {{ $mainJs := resources.Get "main-head.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint}}
+    <script src="{{$mainJs.RelPermalink}}" integrity="{{ $mainJs.Data.Integrity }}"></script>  */}}
 
-    {{/*  {{ $mainAsyncJs := resources.Get "main-async.js"}}
-    {{ $mainAsyncJs = $mainAsyncJs | resources.Fingerprint }}
+    {{/*  {{ $mainAsyncJs := resources.Get "main-async.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
     <script async src="{{$mainAsyncJs.RelPermalink}}" integrity="{{ $mainAsyncJs.Data.Integrity }}"></script>  */}}
 
-    {{/*  {{ $mainDeferJs := resources.Get "main-defer.js"}}
-    {{ $mainDeferJs = $mainDeferJs | resources.Fingerprint }}
+    {{/*  {{ $mainDeferJs := resources.Get "main-defer.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
     <script defer src="{{$mainDeferJs.RelPermalink}}" integrity="{{ $mainDeferJs.Data.Integrity }}"></script>  */}}
 
   </head>
   <body>
-    {{ $mainStartJs := resources.Get "main-start.js"}}
-    {{ $mainStartJs = $mainStartJs | resources.Fingerprint }}
+    {{ $mainStartJs := resources.Get "main-start.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
     <script defer src="{{$mainStartJs.RelPermalink}}" integrity="{{ $mainStartJs.Data.Integrity }}"></script>
     {{ block "intro" . }}
     {{ end }}
@@ -58,9 +56,7 @@
         {{ partial "footer.html" .}}
     {{ end }}
 
-    {{ $mainEndJs := resources.Get "main-end.js" | js.Build }}
-    {{ $mainEndJs = $mainEndJs | resources.Fingerprint }}
-    {{ $mainEndJs = $mainEndJs}}
+    {{ $mainEndJs := resources.Get "main-end.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
     <script defer src="{{$mainEndJs.RelPermalink}}" integrity="{{ $mainEndJs.Data.Integrity }}"></script>
   </body>
 </html>

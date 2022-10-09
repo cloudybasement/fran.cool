@@ -3,7 +3,7 @@
     {{ $data := site.Data.startScreen }}
     <section class="intro" id="intro">
       <div class="intro-container">
-        <img class="intro-logo cld-responsive" data-src="{{ site.Params.cloudinaryBaseURL }}/{{ $data.background }}" alt="Large Logo" width="1320" height="930">
+        <img class="intro-logo" src="{{ $data.background }}" alt="Large Logo" width="1320" height="930">
         <a href="#start" class="relative">
           {{ $file := (replaceRE `(.*\/v\d*\/)` "" $data.image) }}
           {{ partial "images/full" (dict "image" $file "class" "intro-image" "alt" "Start screen image" "width" "1144" "height" "722") }}

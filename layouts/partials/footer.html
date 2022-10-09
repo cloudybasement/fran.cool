@@ -9,19 +9,6 @@
     </div>
     <div class="footer-email">
         <a class="eml-protected" href="#">{{ $data.email }}</a>
-        <script>
-            var allElements = document.getElementsByClassName("eml-protected");
-            for (var i = 0; i < allElements.length; i++) {
-                updateAnchor(allElements[i])
-            }
-            
-            function updateAnchor(el) {
-                var encoded = el.innerHTML;
-                var decoded = decodeEmail(encoded);
-                el.textContent = decoded;
-                el.href = 'mailto:' + decoded;
-            }
-        </script>
     </div>
     <div class="footer-bottom">
         <div class="footer-signature">{{ $data.signature }}</div>
