@@ -127,7 +127,6 @@ header.header {
     @media screen and (max-width: 48rem) {
       width: 8.0625rem;
     }
-    
   }
 
   nav.navbar ul {
@@ -186,6 +185,10 @@ header.header {
       }
     }
   }
+}
+
+.dark-mode div.logo img{
+  filter: invert(1);
 }
 
 body.animate-dark-mode .darkmode-switch-icon {
@@ -366,6 +369,10 @@ section.intro{
   @media screen and (max-width: 48rem) {
     padding: 1.5rem 0;
   }
+}
+
+.dark-mode img.intro-logo{
+  filter: invert(1);
 }
 
 // WORK DETAIL PAGE
