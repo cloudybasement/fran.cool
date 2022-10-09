@@ -1,6 +1,6 @@
 {{ define "main" }}
     <section>
-        <a href="/#start" class="work-back">
+        <a href="/#works" class="work-back">
             <svg width="18" height="18" viewBox="0 0 6 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 1L1 9L5 17" stroke="var(--color-text)"/>
             </svg>
@@ -12,7 +12,7 @@
         </div>
         <span class="work-type">{{ .Param "project-type" }}</span>
         {{ $file := (replaceRE `(.*\/v\d*\/)` "" .Params.image) }}
-        {{ partial "images/full" (dict "image" $file "class" "work-featured-image" "alt" "Work featured image" "width" "1320" "height" "882") }}
+        {{ partial "images/full" (dict "image" $file "class" "work-featured-image" "alt" "Work featured image" "width" "1320" "height" "auto") }}
     </section>
     {{ range .Params.modules }}
         <section class="work-module">

@@ -35,26 +35,30 @@
     {{/*  {{ $mainAsyncJs := resources.Get "main-async.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
     <script async src="{{$mainAsyncJs.RelPermalink}}" integrity="{{ $mainAsyncJs.Data.Integrity }}"></script>  */}}
 
-    {{/*  {{ $mainDeferJs := resources.Get "main-defer.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
-    <script defer src="{{$mainDeferJs.RelPermalink}}" integrity="{{ $mainDeferJs.Data.Integrity }}"></script>  */}}
+    {{ $mainDeferJs := resources.Get "main-defer.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
+    <script defer src="{{$mainDeferJs.RelPermalink}}" integrity="{{ $mainDeferJs.Data.Integrity }}"></script>
 
   </head>
   <body>
-    {{ $mainStartJs := resources.Get "main-start.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
-    <script defer src="{{$mainStartJs.RelPermalink}}" integrity="{{ $mainStartJs.Data.Integrity }}"></script>
-    {{ block "intro" . }}
-    {{ end }}
-    {{ block "header" . }}
-        {{ partial "header.html" .}}
-    {{ end }}
-    <main class="main">
-      {{ block "main" . }}
-        <!-- The part of the page that begins to differ between templates -->
+    <main id="swup">
+      {{/*  {{ $mainStartJs := resources.Get "main-start.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
+      <script defer src="{{$mainStartJs.RelPermalink}}" integrity="{{ $mainStartJs.Data.Integrity }}"></script>  */}}
+      {{ block "intro" . }}
+      {{ end }}
+      {{ block "header" . }}
+          {{ partial "header.html" .}}
+      {{ end }}
+      <div class="main">
+        {{ block "main" . }}
+          <!-- The part of the page that begins to differ between templates -->
+        {{ end }}
+      </div>
+      {{ block "footer" . }}
+          {{ partial "footer.html" .}}
       {{ end }}
     </main>
-    {{ block "footer" . }}
-        {{ partial "footer.html" .}}
-    {{ end }}
+    <div class="transition-zoom"></div>
+    <div class="transition-fade"></div>
 
     {{ $mainEndJs := resources.Get "main-end.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
     <script defer src="{{$mainEndJs.RelPermalink}}" integrity="{{ $mainEndJs.Data.Integrity }}"></script>
