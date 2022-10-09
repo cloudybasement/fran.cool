@@ -11,7 +11,7 @@
             <span class="work-year">{{ .Date.Format "2006" }}</span>
         </div>
         <span class="work-type">{{ .Param "project-type" }}</span>
-        <img data-src="{{ site.Params.cloudinaryBaseURL }}/w_auto,c_scale,f_auto,q_auto,dpr_auto/{{ .Params.image }}" alt="" class="work-featured-image cld-responsive">
+        {{ partial "images/full" (dict "image" .Params.image "class" "work-featured-image" "alt" "Work featured image" "width" "1320" "height" "882") }}
     </section>
     {{ range .Params.modules }}
         <section class="work-module">

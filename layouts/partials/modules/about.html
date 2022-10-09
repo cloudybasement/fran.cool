@@ -3,7 +3,7 @@
         <h2>{{ .title }}</h2>
     </div>
     <div class="sbs-content">
-        <img class="cld-responsive" data-src="{{ site.Params.cloudinaryBaseURL }}/w_auto,c_scale,f_auto,q_auto,dpr_auto/{{ .image }}" alt=""/>
+        {{ partial "images/half-dektop" (dict "image" .image "alt" "{{ .title }} image" "width" "634" "height" "auto" "loading" "lazy") }}
         <div class="md-content">{{ .text | markdownify }}</div>
     </div>
 </div>
