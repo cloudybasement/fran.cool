@@ -21,6 +21,7 @@ menu:
 
 params:
   logo: https://res.cloudinary.com/dikhrro6y/image/upload/v1664819388/fran.cool-black.svg
+  cloudinaryBaseURL: "https://res.cloudinary.com/dikhrro6y"
 
 mediaTypes:
   text/x-netlify:

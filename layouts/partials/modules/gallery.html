@@ -1,5 +1,5 @@
 <div class="module-gallery" {{ with .anchor }}id="{{ . }}"{{ end }}>
 {{ range .images}}
-<img src="{{ . }}">
+<img loading="lazy" data-src="{{ site.Params.cloudinaryBaseURL }}/w_auto,c_scale,f_auto,q_auto,dpr_auto/{{ . }}" class="cld-responsive">
 {{ end }}
 </div>

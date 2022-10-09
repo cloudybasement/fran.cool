@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ .Site.Params.metaDescription }}" />
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
     <meta charset="utf-8">
     {{ if or (.Page.IsHome) (eq .Page.RelPermalink "/pages/home/")}}
       <link rel="canonical" href="{{ .Site.BaseURL }}" />
@@ -40,6 +41,9 @@
 
   </head>
   <body>
+    {{ $mainStartJs := resources.Get "main-start.js"}}
+    {{ $mainStartJs = $mainStartJs | resources.Fingerprint }}
+    <script defer src="{{$mainStartJs.RelPermalink}}" integrity="{{ $mainStartJs.Data.Integrity }}"></script>
     {{ block "intro" . }}
     {{ end }}
     {{ block "header" . }}
@@ -54,8 +58,9 @@
         {{ partial "footer.html" .}}
     {{ end }}
 
-    {{ $mainEndJs := resources.Get "main-end.js"}}
+    {{ $mainEndJs := resources.Get "main-end.js" | js.Build }}
     {{ $mainEndJs = $mainEndJs | resources.Fingerprint }}
+    {{ $mainEndJs = $mainEndJs}}
     <script defer src="{{$mainEndJs.RelPermalink}}" integrity="{{ $mainEndJs.Data.Integrity }}"></script>
   </body>
 </html>

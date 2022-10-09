@@ -3,7 +3,7 @@ title: First Project
 project-type: Design
 date: 2022-10-03T17:55:31.585Z
 weight: 10
-image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-5.jpg
+image: cld-sample-5.jpg
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
   turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
   fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed
@@ -11,7 +11,7 @@ summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
 modules:
   - type: gallery
     images:
-      - https://res.cloudinary.com/dikhrro6y/image/upload/v1664808459/cld-sample-4.jpg
+      - cld-sample-4.jpg
   - type: paragraph
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
       molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
@@ -20,9 +20,9 @@ modules:
     title: Lorem Ipsum
   - type: gallery
     images:
-      - https://res.cloudinary.com/dikhrro6y/image/upload/v1664808459/cld-sample-4.jpg
-      - https://res.cloudinary.com/dikhrro6y/image/upload/v1664808458/cld-sample-2.jpg
-      - https://res.cloudinary.com/dikhrro6y/image/upload/v1664818982/dog.jpg
+      - cld-sample-4.jpg
+      - cld-sample-2.jpg
+      - dog.jpg
   - type: paragraph
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
       molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla

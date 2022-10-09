@@ -3,9 +3,9 @@
     {{ $data := site.Data.startScreen }}
     <section class="intro" id="intro">
       <div class="intro-container">
-        <img class="intro-logo" src="{{ $data.background }}" alt="" width="1320" height="930">
+        <img class="intro-logo cld-responsive" data-src="{{ site.Params.cloudinaryBaseURL }}/w_auto,c_scale,f_auto,q_auto,dpr_auto/{{ $data.background }}" alt="Large Logo" width="1320" height="930">
         <a href="#start" class="relative">
-          <img class="intro-image" src="{{ $data.image }}" alt="" width="1144" height="722">
+          <img class="intro-image cld-responsive" data-src="{{ site.Params.cloudinaryBaseURL }}/w_auto,c_scale,f_auto,q_auto,dpr_auto/{{ $data.image }}" alt="" width="1144" height="722">
           <div class=" hover-invert-button-trigger">
             <button class="hover-invert-button">
               <svg width="36" height="12" viewBox="0 0 18 6" fill="none" xmlns="http://www.w3.org/2000/svg">

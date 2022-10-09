@@ -1,9 +1,9 @@
 <div class="about-module" {{ with .anchor }}id="{{ . }}"{{ end }}>
-    <div class="bg-title">
+    <div class="bg-title" data-speed="1">
         <h2>{{ .title }}</h2>
     </div>
     <div class="sbs-content">
-        <img src="{{ .image }}" alt=""/>
+        <img class="cld-responsive" data-src="{{ site.Params.cloudinaryBaseURL }}/w_auto,c_scale,f_auto,q_auto,dpr_auto/{{ .image }}" alt=""/>
         <div class="md-content">{{ .text | markdownify }}</div>
     </div>
 </div>
