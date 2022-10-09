@@ -5,7 +5,8 @@
     <div class="works-grid relative">
         {{ range where site.RegularPages "Type" "==" "works"}}
             <a class="works-link" href="{{ .RelPermalink }}">
-                {{ partial "images/half-dektop" (dict "image" .Params.image "class" "works-image" "alt" "{{ .Title }} preview image" "width" "650" "height" "384" "loading" "lazy") }}
+                {{ $file := (replaceRE `(.*\/v\d*\/)` "" .Params.image) }}
+                {{ partial "images/half-dektop" (dict "image" $file "class" "works-image" "alt" "{{ .Title }} preview image" "width" "650" "height" "384" "loading" "lazy") }}
                 <h3 class="works-title">{{ .Title }}</h3>
                 <span class="works-type">{{ .Param "project-type" }}</span>
                 <div class=" hover-invert-button-trigger">

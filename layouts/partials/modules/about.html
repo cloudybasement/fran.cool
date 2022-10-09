@@ -3,7 +3,8 @@
         <h2>{{ .title }}</h2>
     </div>
     <div class="sbs-content">
-        {{ partial "images/half-dektop" (dict "image" .image "alt" "{{ .title }} image" "width" "634" "height" "auto" "loading" "lazy") }}
+        {{ $file := (replaceRE `(.*\/v\d*\/)` "" .image) }}
+        {{ partial "images/half-dektop" (dict "image" $file "alt" "{{ .title }} image" "width" "634" "height" "auto" "loading" "lazy") }}
         <div class="md-content">{{ .text | markdownify }}</div>
     </div>
 </div>
