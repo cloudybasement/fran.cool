@@ -4,7 +4,7 @@
 let darkmodeSwitch = document.getElementById('darkmode-switch');
 darkmodeSwitch.addEventListener("click", e =>{
     document.querySelector('body').classList.add('animate-dark-mode');
-    console.log(e);
+    // console.log(e);
     if(currentTheme == "light"){
         document.querySelector('body').classList.add('dark-mode');
         currentTheme = "dark"
@@ -40,7 +40,7 @@ if(introSlide){
     if(document.documentElement.scrollTop-introSlide.getBoundingClientRect().height+window.innerHeight>0){
         // console.log(document.documentElement.scrollTop-introSlide.getBoundingClientRect().height+window.innerHeight);
         window.requestAnimationFrame(() => {
-            console.log(-introSlide.getBoundingClientRect().height+window.innerHeight);
+            // console.log(-introSlide.getBoundingClientRect().height+window.innerHeight);
             introSlide.style.transform = `translateY(${-introSlide.getBoundingClientRect().height+window.innerHeight}px)`
         })
     }
@@ -106,8 +106,9 @@ function updateAnchor(el) {
     el.href = 'mailto:' + decoded;
 }
 
-let emlElements = document.getElementsByClassName("eml-protected");
+let emlElements = [...document.getElementsByClassName("eml-protected")];
 emlElements.forEach((e) => {
+    console.log(`decoding ${e}`)
     updateAnchor(e)
 })
 
