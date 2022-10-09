@@ -21,4 +21,5 @@ modules:
       Maecenas eget condimentum velit, sit amet feugiat lectus.
     title: Lorem Ipsum
 link: https://fran.cool/
+gifv: https://res.cloudinary.com/dikhrro6y/video/upload/f_auto,q_auto:eco/v1665341957/another-one_kd7s6h.mp4
 ---
