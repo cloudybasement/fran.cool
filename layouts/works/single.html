@@ -44,10 +44,12 @@
                 <span class="h2">Next</span>
             </div>
             <div class="work-next-gif hover-invert-button-frame">
-                <video autoplay loop muted playsinline disablepictureinpicture>
-                    {{ $file := replaceRE `\/upload\/(v\d*)\/` `/upload/f_auto/` .Params.gifv }}
-                    <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.webm` $file }}" type="video/webm">
-                    <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.mp4` $file }}" type="video/mp4">
+                {{ $file := replaceRE `\/upload\/(v\d*)\/` `/upload/f_auto/q_auto/` .Params.gifv }}
+                <video class="lazy" autoplay loop muted playsinline disablepictureinpicture
+                    poster="{{ replaceRE `\.[a-zA-Z0-9]*$` `.jpg` $file }}" >
+                    <source data-src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.webm` $file }}" type="video/webm">
+                    <source data-src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.mp4` $file }}" type="video/mp4">
+                    <source data-src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.ogv` $file }}" type="video/ogg">
                 </video>
             </div>
             <div class="hover-invert-button-trigger">
