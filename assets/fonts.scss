@@ -1,28 +1,28 @@
 @font-face {
   font-family: 'GeneralSans';
-  src: url('./fonts/GeneralSans-Variable.woff2') format('woff2'),
-       url('./fonts/GeneralSans-Variable.woff') format('woff'),
-       url('./fonts/GeneralSans-Variable.ttf') format('truetype');
-  font-weight: 200 700;
+  src: url('/fonts/GeneralSans-Variable.woff2') format('woff2'),
+       url('/fonts/GeneralSans-Variable.woff') format('woff'),
+       url('/fonts/GeneralSans-Variable.ttf') format('truetype');
+  font-weight: 400 600 700;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GeneralSans-Italic';
-  src:  url('./fonts/GeneralSans-VariableItalic.woff2') format('woff2'),
-        url('./fonts/GeneralSans-VariableItalic.woff') format('woff'),
-        url('./fonts/GeneralSans-VariableItalic.ttf') format('truetype');
-  font-weight: 200 700;
+  src:  url('/fonts/GeneralSans-VariableItalic.woff2') format('woff2'),
+        url('/fonts/GeneralSans-VariableItalic.woff') format('woff'),
+        url('/fonts/GeneralSans-VariableItalic.ttf') format('truetype');
+  font-weight: 400 600 700;
   font-display: swap;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Anton';
-  src: url('./fonts/Anton-Regular.woff2') format('woff2'),
-       url('./fonts/Anton-Regular.woff') format('woff'),
-       url('./fonts/Anton-Regular.ttf') format('truetype');
+  src: url('/fonts/Anton-Regular.woff2') format('woff2'),
+       url('/fonts/Anton-Regular.woff') format('woff'),
+       url('/fonts/Anton-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;

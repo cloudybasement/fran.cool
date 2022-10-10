@@ -45,8 +45,9 @@
             </div>
             <div class="work-next-gif hover-invert-button-frame">
                 <video autoplay loop muted playsinline disablepictureinpicture>
-                    <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.mp4` .Params.gifv }}" type="video/mp4">
-                    <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.webm` .Params.gifv }}" type="video/webm">
+                    {{ $file := replaceRE `\/upload\/(v\d*)\/` `/upload/f_auto/` .Params.gifv }}
+                    <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.webm` $file }}" type="video/webm">
+                    <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.mp4` $file }}" type="video/mp4">
                 </video>
             </div>
             <div class="hover-invert-button-trigger">

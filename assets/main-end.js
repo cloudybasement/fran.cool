@@ -51,10 +51,15 @@ function init() {
             let button = e.querySelector("button");
             e.addEventListener("mousemove", (e) => {
                 //console.log(e);
+                // let translateX = e.offsetX - button.getBoundingClientRect().width/2;
+                // let translateY = e.offsetY - button.getBoundingClientRect().height/2;
                 window.requestAnimationFrame(() => {
                     // button.style.setProperty('--scale', Math.abs(e.offsetX/(button.getBoundingClientRect().width/2)));
-                    button.style.setProperty('--translateX', e.offsetX - button.getBoundingClientRect().width/2+'px');
-                    button.style.setProperty('--translateY', e.offsetY - button.getBoundingClientRect().height/2+'px');
+                    let translateX = e.clientX-button.parentElement.getBoundingClientRect().left - button.getBoundingClientRect().width/2;
+                    let translateY = e.clientY-button.parentElement.getBoundingClientRect().top - button.getBoundingClientRect().height/2;
+                    // console.log(e.clientX-button.parentElement.getBoundingClientRect().left);
+                    button.style.setProperty('--translateX', translateX+'px');
+                    button.style.setProperty('--translateY', translateY+'px');
                 })
             }, false)
         })
@@ -149,7 +154,7 @@ init()
 
 import Swup from 'swup';
 import SwupScrollPlugin from '@swup/scroll-plugin';
-import SwupDebugPlugin from '@swup/debug-plugin';
+// import SwupDebugPlugin from '@swup/debug-plugin';
 
 const swupScrollPlugin = new SwupScrollPlugin({
     animateScroll: {
@@ -162,7 +167,7 @@ const swupScrollPlugin = new SwupScrollPlugin({
 const swup = new Swup({
     plugins: [
                 swupScrollPlugin,
-                new SwupDebugPlugin()
+                // new SwupDebugPlugin()
             ]
 });
 swup.on('contentReplaced', init);
