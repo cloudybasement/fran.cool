@@ -18,7 +18,7 @@ if(currentTheme == "dark"){
 
 // Transition zoom effect
 let zoomEl = document.querySelector(".transition-zoom");
-window.addEventListener("mousemove", e => {
+window.addEventListener("click", e => {
     // console.log(e)
     zoomEl.style.setProperty("--top", e.clientY+'px');
     zoomEl.style.setProperty("--left", e.clientX+'px');
