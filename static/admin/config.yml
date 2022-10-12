@@ -143,6 +143,10 @@ collections:
   - name: title
     label: Title
     widget: string
+  - name: summary
+    label: Summary
+    widget: text
+    required: false
   - name: modules
     label: Modules
     label_singular: Module
@@ -253,10 +257,10 @@ collections:
     name: imageAltText
     wisget: string
     required: false
-  - label: Summary
-    name: summary
+  - name: summary
+    label: Summary
     widget: text
-    hint: Used for listing pages and meta description
+    required: false
   - label: Content
     name: modules
     widget: list
@@ -289,13 +293,13 @@ collections:
     - label: Gallery
       name: gallery
       widget: object
-      summary: "{{fields[0].fields.image}}"
+      summary: "{{fields[0].fields.imageAltText}}"
       fields:
       - name: images
         label_singular: Image
         label: Images
         widget: list
-        summary: "{{fields.image}}"
+        summary: "{{fields.imageAltText}}"
         fields:
         -  label: Image
           name: image
