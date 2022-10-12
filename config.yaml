@@ -1,7 +1,6 @@
 baseURL: 'https://fran-cool.netlify.app/'
 title: fran.cool
 languageCode: en-us
-defaultContentLanguage: en
 taxonomies:
   page: pages
   works: works
@@ -22,6 +21,7 @@ menu:
 params:
   logo: https://res.cloudinary.com/dikhrro6y/image/upload/v1664819388/fran.cool-black.svg
   cloudinaryBaseURL: "https://res.cloudinary.com/dikhrro6y"
+  defaultContentLanguage: en
 
 mediaTypes:
   text/x-netlify:
