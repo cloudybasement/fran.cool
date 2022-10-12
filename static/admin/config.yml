@@ -1,26 +1,22 @@
-# using git as backend store
+// Basics
 backend:
   name: git-gateway
   branch: main
-media_folder: "/static/media" # Folder where user uploaded files should go
+local_backend: true
+
+// Git Folder Setup
+media_folder: "/static/media"
 public_folder: "/media"
+
+// Editor Setup
 site_url: https://fran-cool.netlify.app/
 show_preview_links: true
 publish_mode: editorial_workflow
 editor:
   preview: false
-locale: "en"
+locale: en
 
-# Allow local visit
-# You need to run at the root of the project `npx netlify-cms-proxy-server`
-local_backend: true
-
-# i18n https://www.netlifycms.org/docs/beta-features/#i18n-support
-i18n:
-  structure: multiple_folders
-  locales: [en, fr]
-  default_locale: en
-
+// Media Library Setup
 media_library:
   name: cloudinary
   output_filename_only: false
@@ -28,298 +24,303 @@ media_library:
     cloud_name: dikhrro6y
     api_key: 462899953829293
 
-# collections configuration
+// Collections Field Setup
 collections:
-  - name: "global"
-    label: "Global Settings"
-    files:
-      - label: "Config"
-        name: "config"
-        file: "config.yaml"
-        fields:
-          - { label: "Title", name: title, widget: string }
-          - { label: "Base URL", name: baseURL, widget: string }
-          - { label: "Language Code", name: languageCode, widget: string }
-          - label: "Parameters"
-            name: params
-            widget: object
-            fields:
-              - label: "Logo"
-                name: logo
-                widget: image
-                allow_multiple: false
-          - label: "Menu"
-            name: menu
-            widget: object
-            fields:
-              - label: "Main"
-                name: main
-                summary: "{{ fields.name }}"
-                widget: list
-                fields:
-                  - { label: "Name", name: name, widget: string }
-                  - { label: "URL", name: url, widget: string }
-                  - { label: "Order", name: weight, widget: number }
-                  - { label: "ID", name: identifier, widget: uuid }
-      - file: "data/startScreen.yml"
-        label: "Start Screen"
-        name: "start-screen"
-        fields:
-          [
-            {
-              label: "Background Graphic",
-              name: "background",
-              widget: "image",
-              allow_multiple: false,
-            },
-            {
-              label: "Image",
-              name: "image",
-              widget: "image",
-              allow_multiple: false,
-            },
-          ]
-      - file: "data/footer.yml"
-        label: "Footer"
-        name: "footer"
-        fields:
-          [
-            {
-              label: "Marquee Text",
-              name: "marquee",
-              widget: "string",
-              default: "Let’s get to work!&emsp;&emsp;&emsp;🛠&emsp;&emsp;&emsp;",
-            },
-            {
-              label: "Marquee Animation Duration",
-              name: "duration",
-              widget: "number",
-              value_type: "float",
-              default: "5",
-            },
-            {
-              label: "Email Address",
-              name: "email",
-              widget: "string",
-              default: "hey@fran.cool",
-            },
-            {
-              label: "Signature",
-              name: "signature",
-              widget: "string",
-              default: "Fran, Creative Overthinker",
-            },
-            {
-              label: "Links",
-              name: "links",
-              widget: "list",
-              fields:
-                [
-                  { label: "Text", name: "text", widget: "string" },
-                  { label: "URL", name: "url", widget: "string" },
-                ],
-            },
-          ]
-      - file: "data/netlifyRedirects.yml"
-        label: "Redirects"
-        name: "redirects"
-        fields:
-          - name: "redirects"
-            label: "Redirects"
-            widget: list
-            fields:
-              [
-                { label: "From", name: "from", widget: "string" },
-                { label: "To", name: "to", widget: "string" },
-              ]
-  - name: "pages"
-    label: "Pages"
-    folder: "content/pages"
-    path: "{{slug}}"
-    media_folder: "{{media_folder}}"
-    public_folder: "{{public_folder}}"
-    create: true
+- name: global
+  label: Global Settings
+  files:
+  - label: Config
+    name: config
+    file: config.yaml
     fields:
-      - name: "title"
-        label: "Title"
-        widget: "string"
-      - name: "modules"
-        label: "Modules"
-        label_singular: "Module"
-        widget: "list"
-        types:
-          - name: "richtext"
-            label: "Rich Text"
-            widget: object
-            summary: "{{fields.text | truncate(40, '...')}}"
-            fields:
-              - name: "text"
-                label: "Text"
-                widget: markdown
-                default: "Nisi magna id ad in proident dolore incididunt enim velit cupidatat amet et occaecat consequat."
-                modes:
-                  - rich_text
-                  - raw
-                sanitize_preview: true
-              - name: "anchor"
-                label: "Anchor ID"
-                hint: "Used for In-Page Linking with #"
-                widget: string
-                required: false
-                pattern:
-                  [
-                    '[a-z\-]*',
-                    "Please only use lowercase letters and dashes ( - )",
-                  ]
-          - name: "works"
-            label: "Works"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - name: "title"
-                label: "Title"
-                widget: string
-                default: "WORKS"
-              - name: "button"
-                title: "Button Text"
-                widget: string
-                default: "see more"
-              - name: "anchor"
-                label: "Anchor ID"
-                hint: "Used for In-Page Linking with #"
-                widget: string
-                required: false
-                pattern:
-                  [
-                    '[a-z\-]*',
-                    "Please only use lowercase letters and dashes ( - )",
-                  ]
-          - name: "about"
-            label: "About"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - name: "title"
-                label: "Title"
-                widget: string
-                default: "ABOUT"
-              - name: "text"
-                label: "Text"
-                widget: markdown
-                default: "Nisi magna id ad in proident dolore incididunt enim velit cupidatat amet et occaecat consequat."
-                modes:
-                  - rich_text
-                  - raw
-                sanitize_preview: true
-              - name: "image"
-                label: "Image"
-                widget: "image"
-              - name: "anchor"
-                label: "Anchor ID"
-                hint: "Used for In-Page Linking with #"
-                widget: string
-                required: false
-                pattern:
-                  [
-                    '[a-z\-]*',
-                    "Please only use lowercase letters and dashes ( - )",
-                  ]
-  - name: "works"
-    label: "Works"
-    folder: "content/works"
-    path: "{{slug}}"
-    media_folder: "{{media_folder}}"
-    public_folder: "{{public_folder}}"
-    create: true
+    - label: Title
+      name: title
+      widget: string
+    - label: Base URL
+      name: baseURL
+      widget: string
+    - label: Language Code
+      name: languageCode
+      widget: string
+    - label: Parameters
+      name: params
+      widget: object
+      fields:
+      - label: Logo
+        name: logo
+        widget: image
+        allow_multiple: false
+    - label: Menu
+      name: menu
+      widget: object
+      fields:
+      - label: Main
+        name: main
+        summary: "{{ fields.name }}"
+        widget: list
+        fields:
+        - label: Name
+          name: name
+          widget: string
+        - label: URL
+          name: url
+          widget: string
+        - label: Order
+          name: weight
+          widget: number
+        - label: ID
+          name: identifier
+          widget: uuid
+  - file: data/startScreen.yml
+    label: Start Screen
+    name: start-screen
     fields:
-      [
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Project Type", name: "project-type", widget: "string" },
-        { label: "Date", name: "date", widget: "datetime" },
-        {
-          label: "Sort Order",
-          hint: "Order for listing and next button (Lower comes first)",
-          name: "weight",
-          widget: "number",
-          value_type: "int",
-        },
-        { label: "Cover Image", name: "image", widget: "image" },
-        {
-          label: "Summary",
-          name: "summary",
-          widget: "text",
-          hint: "Used for listing pages and meta description",
-        },
-        {
-          label: "Content",
-          name: "modules",
-          widget: "list",
-          types:
-            [
-              {
-                label: "Paragraph",
-                name: "paragraph",
-                widget: object,
-                summary: "{{fields.title}}",
-                fields:
-                  [
-                    { name: "title", label: "Title", widget: string },
-                    {
-                      name: "text",
-                      label: "Text",
-                      widget: markdown,
-                      default: "Nisi magna id ad in proident dolore incididunt enim velit cupidatat amet et occaecat consequat.",
-                      modes: ["rich_text", "raw"],
-                      sanitize_preview: true,
-                    },
-                    {
-                      name: "anchor",
-                      label: "Anchor ID",
-                      hint: "Used for In-Page Linking with #",
-                      widget: string,
-                      required: false,
-                      pattern:
-                        [
-                          '[a-z\-]*',
-                          "Please only use lowercase letters and dashes ( - )",
-                        ],
-                    },
-                  ],
-              },
-              {
-                label: "Gallery",
-                name: "gallery",
-                widget: object,
-                summary: "{{fields[0].fields.image}}",
-                fields:
-                  [
-                    {
-                      name: "images",
-                      label_singular: "Image",
-                      label: "Images",
-                      widget: list,
-                      summary: "{{fields.image}}",
-                      field: { label: Image, name: image, widget: image },
-                    },
-                    {
-                      name: "anchor",
-                      label: "Anchor ID",
-                      hint: "Used for In-Page Linking with #",
-                      widget: string,
-                      required: false,
-                      pattern:
-                        [
-                          '[a-z\-]*',
-                          "Please only use lowercase letters and dashes ( - )",
-                        ],
-                    },
-                  ],
-              },
-            ],
-        },
-        { label: "Project Link", name: "link", widget: "string", required: false },
-        { label: "Next Button GIFV", name: "gifv", widget: "file", hint: "Insert video file as Mp4 or WEBM", required: false, media_library:
-          {name: cloudinary,
-          output_filename_only: false }
-        }
-      ]
+    - label: Background Graphic
+      name: background
+      widget: image
+      allow_multiple: false
+    - label: Image
+      name: image
+      widget: image
+      allow_multiple: false
+    - label: Image alt Text
+      name: imageAltText
+      wisget: string
+      required: false
+  - file: data/footer.yml
+    label: Footer
+    name: footer
+    fields:
+    - label: Marquee Text
+      name: marquee
+      widget: string
+      default: "Let’s get to work!&emsp;&emsp;&emsp;\U0001F6E0&emsp;&emsp;&emsp;"
+    - label: Marquee Animation Duration
+      name: duration
+      widget: number
+      value_type: float
+      default: '5'
+    - label: Email Address
+      name: email
+      widget: string
+      default: hey@fran.cool
+    - label: Signature
+      name: signature
+      widget: string
+      default: Fran, Creative Overthinker
+    - label: Links
+      name: links
+      widget: list
+      fields:
+      - label: Text
+        name: text
+        widget: string
+      - label: URL
+        name: url
+        widget: string
+  - file: data/netlifyRedirects.yml
+    label: Redirects
+    name: redirects
+    fields:
+    - name: redirects
+      label: Redirects
+      widget: list
+      fields:
+      - label: From
+        name: from
+        widget: string
+      - label: To
+        name: to
+        widget: string
+- name: pages
+  label: Pages
+  folder: content/pages
+  path: "{{slug}}"
+  media_folder: "{{media_folder}}"
+  public_folder: "{{public_folder}}"
+  create: true
+  fields:
+  - name: title
+    label: Title
+    widget: string
+  - name: modules
+    label: Modules
+    label_singular: Module
+    widget: list
+    types:
+    - name: richtext
+      label: Rich Text
+      widget: object
+      summary: "{{fields.text | truncate(40, '...')}}"
+      fields:
+      - name: text
+        label: Text
+        widget: markdown
+        default: Nisi magna id ad in proident dolore incididunt enim velit cupidatat
+          amet et occaecat consequat.
+        modes:
+        - rich_text
+        - raw
+        sanitize_preview: true
+      - name: anchor
+        label: Anchor ID
+        hint: 'Used for In-Page Linking with #'
+        widget: string
+        required: false
+        pattern:
+        - "[a-z\\-]*"
+        - Please only use lowercase letters and dashes ( - )
+    - name: works
+      label: Works
+      widget: object
+      summary: "{{fields.title}}"
+      fields:
+      - name: title
+        label: Title
+        widget: string
+        default: WORKS
+      - name: button
+        title: Button Text
+        widget: string
+        default: see more
+      - name: anchor
+        label: Anchor ID
+        hint: 'Used for In-Page Linking with #'
+        widget: string
+        required: false
+        pattern:
+        - "[a-z\\-]*"
+        - Please only use lowercase letters and dashes ( - )
+    - name: about
+      label: About
+      widget: object
+      summary: "{{fields.title}}"
+      fields:
+      - name: title
+        label: Title
+        widget: string
+        default: ABOUT
+      - name: text
+        label: Text
+        widget: markdown
+        default: Nisi magna id ad in proident dolore incididunt enim velit cupidatat
+          amet et occaecat consequat.
+        modes:
+        - rich_text
+        - raw
+        sanitize_preview: true
+      - name: image
+        label: Image
+        widget: image
+      - label: Image alt Text
+        name: imageAltText
+        wisget: string
+        required: false
+      - name: anchor
+        label: Anchor ID
+        hint: 'Used for In-Page Linking with #'
+        widget: string
+        required: false
+        pattern:
+        - "[a-z\\-]*"
+        - Please only use lowercase letters and dashes ( - )
+- name: works
+  label: Works
+  folder: content/works
+  path: "{{slug}}"
+  media_folder: "{{media_folder}}"
+  public_folder: "{{public_folder}}"
+  create: true
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: Project Type
+    name: project-type
+    widget: string
+  - label: Date
+    name: date
+    widget: datetime
+  - label: Sort Order
+    hint: Order for listing and next button (Lower comes first)
+    name: weight
+    widget: number
+    value_type: int
+  - label: Cover Image
+    name: image
+    widget: image
+  - label: Image alt Text
+    name: imageAltText
+    wisget: string
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    hint: Used for listing pages and meta description
+  - label: Content
+    name: modules
+    widget: list
+    types:
+    - label: Paragraph
+      name: paragraph
+      widget: object
+      summary: "{{fields.title}}"
+      fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: text
+        label: Text
+        widget: markdown
+        default: Nisi magna id ad in proident dolore incididunt enim velit cupidatat
+          amet et occaecat consequat.
+        modes:
+        - rich_text
+        - raw
+        sanitize_preview: true
+      - name: anchor
+        label: Anchor ID
+        hint: 'Used for In-Page Linking with #'
+        widget: string
+        required: false
+        pattern:
+        - "[a-z\\-]*"
+        - Please only use lowercase letters and dashes ( - )
+    - label: Gallery
+      name: gallery
+      widget: object
+      summary: "{{fields[0].fields.image}}"
+      fields:
+      - name: images
+        label_singular: Image
+        label: Images
+        widget: list
+        summary: "{{fields.image}}"
+        fields:
+        -  label: Image
+          name: image
+          widget: image
+        - label: Image alt Text
+          name: imageAltText
+          wisget: string
+          required: false
+      - name: anchor
+        label: Anchor ID
+        hint: 'Used for In-Page Linking with #'
+        widget: string
+        required: false
+        pattern:
+        - "[a-z\\-]*"
+        - Please only use lowercase letters and dashes ( - )
+  - label: Project Link
+    name: link
+    widget: string
+    required: false
+  - label: Next Button GIFV
+    name: gifv
+    widget: file
+    hint: Insert video file as Mp4 or WEBM
+    required: false
+    media_library:
+      name: cloudinary
+      output_filename_only: false

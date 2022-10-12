@@ -11,7 +11,8 @@ summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
 modules:
   - type: gallery
     images:
-      - cld-sample-4.jpg
+      - image: cld-sample-4.jpg
+      - imageAltText: cool alt text
     anchor: "1"
   - type: paragraph
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
@@ -22,9 +23,12 @@ modules:
     anchor: "2"
   - type: gallery
     images:
-      - cld-sample-4.jpg
-      - cld-sample-2.jpg
-      - dog.jpg
+      - image: cld-sample-4.jpg
+        imageAltText: cool alt text
+      - image: cld-sample-2.jpg
+        imageAltText: cool alt text
+      - image: dog.jpg
+        imageAltText: cool alt text
     anchor: "3"
   - type: paragraph
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis

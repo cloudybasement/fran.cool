@@ -1,3 +1,13 @@
+{{ define "seo" }}
+    <meta name="description" content="{{ .Params.summary }}">
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    {{ with .Params.image }}
+        {{ $file := (replaceRE `(.*\/v\d*\/)` "" .) }}
+        <meta property="og:image" content="{{ site.Params.cloudinaryBaseURL }}/w_1200,h_630,f_jpg,q_80/{{ $file }}" />
+    {{ end }}
+{{ end }}
 {{ define "main" }}
     <section>
         <a href="/#works" class="work-back">
@@ -12,7 +22,7 @@
         </div>
         <span class="work-type">{{ .Param "project-type" }}</span>
         {{ $file := (replaceRE `(.*\/v\d*\/)` "" .Params.image) }}
-        {{ partial "images/full" (dict "image" $file "class" "work-featured-image" "alt" "Work featured image" "width" "1320" "height" "auto") }}
+        {{ partial "images/full" (dict "image" $file "class" "work-featured-image" "alt" .Params.imageAltText "width" "1320" "height" "auto") }}
     </section>
     {{ range .Params.modules }}
         <section class="work-module">

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <base href={{.Site.BaseURL }} />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ .Site.Params.metaDescription }}" />
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
     <meta charset="utf-8">
-    {{ if or (.Page.IsHome) (eq .Page.RelPermalink "/pages/home/")}}
+    {{ block "seo" . }}
+      <meta name="description" content="{{ with .Page.Title }}{{ if ne $.Page.IsHome true }}{{ . }} | {{end}}{{ end }}{{ .Site.Title }}">
+    {{ end }}
+    {{ if eq .Page.RelPermalink "/pages/home/"}}
       <link rel="canonical" href="{{ .Site.BaseURL }}" />
     {{end}}
     {{ block "canonical" .}}{{ end }}
