@@ -1,14 +1,11 @@
-// Basics
 backend:
   name: git-gateway
   branch: main
 local_backend: true
 
-// Git Folder Setup
 media_folder: "/static/media"
 public_folder: "/media"
 
-// Editor Setup
 site_url: https://fran-cool.netlify.app/
 show_preview_links: true
 publish_mode: editorial_workflow
@@ -16,7 +13,6 @@ editor:
   preview: false
 locale: en
 
-// Media Library Setup
 media_library:
   name: cloudinary
   output_filename_only: false
@@ -24,7 +20,6 @@ media_library:
     cloud_name: dikhrro6y
     api_key: 462899953829293
 
-// Collections Field Setup
 collections:
 - name: global
   label: Global Settings
