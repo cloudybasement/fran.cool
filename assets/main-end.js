@@ -28,6 +28,9 @@ window.addEventListener("click", e => {
 
 
 function init() {
+    // Grab the prefers reduced media query.
+    const reducedMotioMediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
     let darkmodeSwitch = document.getElementById('darkmode-switch');
     darkmodeSwitch.addEventListener("click", e =>{
         document.querySelector('body').classList.add('toggle-darkmode');
@@ -73,7 +76,10 @@ function init() {
             // console.log(document.documentElement.scrollTop-introSlide.getBoundingClientRect().height+window.innerHeight);
             window.requestAnimationFrame(() => {
                 // console.log(-introSlide.getBoundingClientRect().height+window.innerHeight);
-                introSlide.style.transform = `translateY(${-introSlide.getBoundingClientRect().height+window.innerHeight}px)`
+
+                if(!reducedMotioMediaQuery.matches){
+                    introSlide.style.transform = `translateY(${-introSlide.getBoundingClientRect().height+window.innerHeight}px)`
+                }
             })
         }
         // if(introSlide.getBoundingClientRect().height<window.scrollY){
@@ -84,7 +90,9 @@ function init() {
             // console.log(scrollThreshold)
             if(scrollThreshold<0){
                 window.requestAnimationFrame(() => {
-                    introSlide.style.transform = `translateY(${-document.documentElement.scrollTop}px)`
+                    if(!reducedMotioMediaQuery.matches){
+                        introSlide.style.transform = `translateY(${-document.documentElement.scrollTop}px)`
+                    }
                 })
             }
             // if(introSlide.getBoundingClientRect().height<window.scrollY){
@@ -103,7 +111,9 @@ function init() {
     parallaxEls.forEach(parallaxEl => {
     const transformY = parallaxEl.dataset.speed * ((parallaxEl.getBoundingClientRect().top-(window.innerHeight-parallaxEl.getBoundingClientRect().height)/2) * ((window.scrollY)/20000));
         window.requestAnimationFrame(()=>{
-            parallaxEl.style.transform = `translate3d(0,${-transformY}px,0)`;
+            if(!reducedMotioMediaQuery.matches){
+                parallaxEl.style.transform = `translate3d(0,${-transformY}px,0)`;
+            }
         })
     })
     }
