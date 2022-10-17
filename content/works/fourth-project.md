@@ -10,50 +10,14 @@ summary: Sakana Tengoku (Fish Haven in Japanese) was part of a design challenge.
   be advertised. The restaurant needed a poster about the competition, where it
   took place and the prize. 
 modules:
-  - type: paragraph
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-      Maecenas eget condimentum velit, sit amet feugiat lectus.
-    title: Lorem Ipsum
-    anchor: "2"
   - type: gallery
     images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-4.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/dog.jpg
-        imageAltText: cool alt text
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015180/Logo-nofish-03_lh247r.png
+        imageAltText: "This is the logo developed for Sakana Tenkogu. "
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666016492/poster-01_aph1xe.jpg
+        imageAltText: This is an image how the flyer that was created for the
+          competition organised by Sakana Tengoku.
     anchor: "3"
-  - type: paragraph
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-      Maecenas eget condimentum velit, sit amet feugiat lectus.
-    title: Lorem Ipsum
-    anchor: "4"
-  - type: gallery
-    images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
-    anchor: 5
-  - type: paragraph
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-      Maecenas eget condimentum velit, sit amet feugiat lectus.
-    title: Lorem Ipsum
-    anchor: 6
-  - type: gallery
-    images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-4.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/dog.jpg
-        imageAltText: cool alt text
-    anchor: 7
 link: https://fran.cool/
 gifv: https://res.cloudinary.com/dikhrro6y/video/upload/v1665341957/another-one_kd7s6h.mp4
 ---
