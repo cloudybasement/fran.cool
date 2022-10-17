@@ -1,13 +1,14 @@
 ---
-title: Fourth Project
-project-type: Design - Strategy - Copywriting
-date: 2022-10-04T18:24:33.601Z
+title: Sakana Tengoku
+project-type: Full Branding – Flyer Design
+date: 2019-12-01T19:24:33.601Z
 weight: 40
-image: Rectangle_2_k94alq.jpg
-summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-  turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
-  fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed
-  risus. "
+image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015204/5db8dbc697feba1a77c0f445_bakery-related-posters-design-2_wchw1k.jpg
+summary: Sakana Tengoku (Fish Haven in Japanese) was part of a design challenge.
+  The goal was to create a logo for a new Japanese restaurant in Kyoto. To
+  celebrate its opening, a salmon eating tournament was organised but needed to
+  be advertised. The restaurant needed a poster about the competition, where it
+  took place and the prize. 
 modules:
   - type: paragraph
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
