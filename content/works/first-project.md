@@ -20,8 +20,9 @@ modules:
     anchor: "2"
   - type: gallery
     images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-4.jpg
-        imageAltText: cool alt text
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666014518/5dba110d6313255243bc8307_Screen_Shot_2019-10-25_at_11.41.02_am_tjqswm.png
+        imageAltText: "This is a visual of how the website looks like when the user
+          first arrives on it. "
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
         imageAltText: cool alt text
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/dog.jpg
