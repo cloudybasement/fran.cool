@@ -19,12 +19,8 @@ modules:
     anchor: "2"
   - type: gallery
     images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-4.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/dog.jpg
-        imageAltText: cool alt text
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015180/Logo-nofish-03_lh247r.png
+        imageAltText: "This is the logo developed for Sakana Tenkogu. "
     anchor: "3"
   - type: paragraph
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
