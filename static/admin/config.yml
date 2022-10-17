@@ -8,7 +8,7 @@ local_backend:
 media_folder: "/static/media"
 public_folder: "/media"
 
-site_url: https://fran-cool.netlify.app/
+site_url: https://fran.cool/
 show_preview_links: true
 publish_mode: editorial_workflow
 editor:
