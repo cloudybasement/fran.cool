@@ -14,6 +14,18 @@ summary: This project was a passion project. The goal was to create a single
 modules:
   - type: gallery
     images:
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666014518/5dba110d6313255243bc8307_Screen_Shot_2019-10-25_at_11.41.02_am_tjqswm.png
+        imageAltText: "This is a visual of how the website looks like when the user
+          first arrives on it. "
+    anchor: "3"
+  - type: paragraph
+    text: The idea was to create a full identity around the disease in order to
+      create awareness through recognition. Subsequently, a logo was created as
+      well as a single page website with thoroughly researched information.
+    title: At the beginning
+    anchor: "2"
+  - type: gallery
+    images:
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015922/cf_logo_ffp0na.png
         imageAltText: This a PNG Image of the logo for the Cystic Fibrosis Association.
     anchor: 5
@@ -27,18 +39,6 @@ modules:
       offers and presents valuable information in a clear and concise manner.
     title: Creating a logo
     anchor: "4"
-  - type: gallery
-    images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666014518/5dba110d6313255243bc8307_Screen_Shot_2019-10-25_at_11.41.02_am_tjqswm.png
-        imageAltText: "This is a visual of how the website looks like when the user
-          first arrives on it. "
-    anchor: "3"
-  - type: paragraph
-    text: The idea was to create a full identity around the disease in order to
-      create awareness through recognition. Subsequently, a logo was created as
-      well as a single page website with thoroughly researched information.
-    title: At the beginning
-    anchor: "2"
   - type: gallery
     images:
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666014665/5dba10a73c1b7dd2eb8e3c72_iphone-x-ui-mockup-scene_w2pvza.png
