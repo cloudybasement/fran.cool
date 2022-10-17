@@ -4,11 +4,7 @@ project-type: Full Branding – Flyer Design
 date: 2019-12-01T19:24:33.601Z
 weight: 40
 image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015204/5db8dbc697feba1a77c0f445_bakery-related-posters-design-2_wchw1k.jpg
-summary: Sakana Tengoku (Fish Haven in Japanese) was part of a design challenge.
-  The goal was to create a logo for a new Japanese restaurant in Kyoto. To
-  celebrate its opening, a salmon eating tournament was organised but needed to
-  be advertised. The restaurant needed a poster about the competition, where it
-  took place and the prize. 
+summary: ""
 modules:
   - type: paragraph
     text: Sakana Tengoku (Fish Haven in Japanese) was part of a design challenge.
