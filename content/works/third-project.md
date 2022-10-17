@@ -4,10 +4,7 @@ project-type: Branding – Website
 date: 2022-10-04T18:24:07.347Z
 weight: 10
 image: Rectangle_2_k94alq.jpg
-summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-  turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
-  fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed
-  risus. "
+summary: ""
 modules:
   - type: paragraph
     text: The logo was created trying to represent lungs and used the southern cross
