@@ -13,11 +13,10 @@ summary: This project was a passion project. The goal was to create a single
   condition.
 modules:
   - type: paragraph
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-      Maecenas eget condimentum velit, sit amet feugiat lectus.
-    title: Lorem Ipsum
+    text: The idea was to create a full identity around the disease in order to
+      create awareness through recognition. Subsequently, a logo was created as
+      well as a single page website with thoroughly researched information.
+    title: At the beginning
     anchor: "2"
   - type: gallery
     images:
