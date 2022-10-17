@@ -1,5 +1,5 @@
 ---
-title: Australian Foundation for Cystic Fibrosis
+title: Australian Association for Cystic Fibrosis
 project-type: Branding – UX/UX Design – Full Coding
 date: 2022-10-03T17:55:31.585Z
 weight: 30
@@ -23,22 +23,21 @@ modules:
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666014518/5dba110d6313255243bc8307_Screen_Shot_2019-10-25_at_11.41.02_am_tjqswm.png
         imageAltText: "This is a visual of how the website looks like when the user
           first arrives on it. "
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/dog.jpg
-        imageAltText: cool alt text
     anchor: "3"
   - type: paragraph
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-      Maecenas eget condimentum velit, sit amet feugiat lectus.
-    title: Lorem Ipsum
+    text: The logo was created trying to represent lungs and used the southern cross
+      to associate the organisation with Australia. The information layout is
+      very strict; what is CF, symptoms, care, treatments and
+      volunteers/donating opportunities. The imagery is strictly related to the
+      medical field except for the last one, for the call to action to help one
+      another. The ultimate goal for this project was to create a platform that
+      offers and presents valuable information in a clear and concise manner.
+    title: Creating a logo
     anchor: "4"
   - type: gallery
     images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015922/cf_logo_ffp0na.png
+        imageAltText: This a PNG Image of the logo for the Cystic Fibrosis Association.
     anchor: 5
   - type: paragraph
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
