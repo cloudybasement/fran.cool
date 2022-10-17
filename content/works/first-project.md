@@ -29,7 +29,7 @@ modules:
     anchor: "2"
   - type: gallery
     images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015922/cf_logo_ffp0na.png
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666020988/Mockup_uyiaj2.jpg
         imageAltText: This a PNG Image of the logo for the Cystic Fibrosis Association.
     anchor: 5
   - type: paragraph
