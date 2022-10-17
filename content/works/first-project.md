@@ -7,11 +7,14 @@ image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666014269/5db8d840366
 imageAltText: This first image displays a mock-up of the visual look of the
   website on a macbook 16 inches screen as well as the mobile version of the
   website on an iPhone 11.
-summary: This project was a passion project. The goal was to create a single
-  page website about any present issue that needed to be known about so I
-  decided to raise awareness about Cystic Fibrosis, a misunderstood medical
-  condition.
+summary: ""
 modules:
+  - type: paragraph
+    text: This project was a passion project. The goal was to create a single page
+      website about any present issue that needed to be known about so I decided
+      to raise awareness about Cystic Fibrosis, a misunderstood medical
+      condition.
+    title: The scope
   - type: gallery
     images:
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666014518/5dba110d6313255243bc8307_Screen_Shot_2019-10-25_at_11.41.02_am_tjqswm.png
