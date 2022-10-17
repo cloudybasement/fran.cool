@@ -10,6 +10,13 @@ summary: Sakana Tengoku (Fish Haven in Japanese) was part of a design challenge.
   be advertised. The restaurant needed a poster about the competition, where it
   took place and the prize. 
 modules:
+  - type: paragraph
+    text: Sakana Tengoku (Fish Haven in Japanese) was part of a design challenge.
+      The goal was to create a logo for a new Japanese restaurant in Kyoto. To
+      celebrate its opening, a salmon eating tournament was organised but needed
+      to be advertised. The restaurant needed a poster about the competition,
+      where it took place and the prize.
+    title: Defining the challenge
   - type: gallery
     images:
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015180/Logo-nofish-03_lh247r.png
