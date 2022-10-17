@@ -2,7 +2,7 @@
 title: Third Project
 project-type: Design - Strategy - Copywriting
 date: 2022-10-04T18:24:07.347Z
-weight: 30
+weight: 10
 image: Rectangle_2_k94alq.jpg
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
   turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
