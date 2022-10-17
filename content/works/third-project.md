@@ -1,6 +1,6 @@
 ---
-title: Third Project
-project-type: Design - Strategy - Copywriting
+title: Atelier Pusteblumen
+project-type: Branding – Website
 date: 2022-10-04T18:24:07.347Z
 weight: 10
 image: Rectangle_2_k94alq.jpg
