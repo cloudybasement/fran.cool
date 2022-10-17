@@ -1,6 +1,6 @@
 ---
-title: First Project
-project-type: Design
+title: Australian Foundation for Cystic Fibrosis
+project-type: Branding – UX/UX Design – Full Coding
 date: 2022-10-03T17:55:31.585Z
 weight: 10
 image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-5.jpg
