@@ -21,19 +21,16 @@ modules:
   - type: about
     title: ABOUT
     text: >-
-      **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed
-      risus.**
+      **Fran is a multidisciplinary designer, currently specialising in UX
+      writing for accessibility. From crafting brand identities to inspiring
+      entrepreneurs to be bold, Fran loves to accompany anyone on their creative
+      journey and help them create the best products possible.** 
 
 
       &nbsp;
 
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. 
-
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.
+      F﻿ran is currently trying to become an expert in accessibility when it comes to web design, making sure that empathy is at the heart of any digital experiences she takes part in designing. When she's not at her desk, you can find her reading in the most comfortable chair in the world or cuddling on the ground with her trusty German Shepherd (guess his name 🌴+📖+🐻).
     image: dog.jpg
     anchor: about
 ---
