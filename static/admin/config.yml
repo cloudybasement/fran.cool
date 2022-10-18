@@ -49,7 +49,7 @@ collections:
       fields:
       - label: Main
         name: main
-        summary: "{{ fields.name }}"
+        summary: "{{ url }}"
         widget: list
         fields:
         - label: Name
