@@ -5,6 +5,9 @@ taxonomies:
   page: pages
   works: works
 
+permalinks:
+  - works: /:slug
+
 menu:
   main:
   - identifier: i038rh390h
