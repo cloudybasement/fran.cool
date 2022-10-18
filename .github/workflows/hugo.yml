@@ -50,8 +50,6 @@ jobs:
           cache: 'npm'
       - name: Install NPM Packages
         run: npm ci
-      - name: Install Node Dependencies
-        
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
