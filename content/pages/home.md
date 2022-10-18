@@ -5,15 +5,10 @@ summary: Esse eu id ipsum labore aliquip pariatur laborum cillum proident
   voluptate non reprehenderit.
 modules:
   - type: richtext
-    text: Aliqua veniam voluptate qui. Quis cillum ullamco magna elit. Excepteur
-      officia elit esse minim. Veniam cillum ullamco aliquip minim irure
-      deserunt aliqua. Adipisicing excepteur non deserunt non commodo laborum.
-      Dolore est non consectetur ea do aliquip ex duis minim officia amet. Ad ea
-      veniam consectetur culpa amet magna amet officia minim proident irure
-      laboris aliquip adipisicing. Culpa id cupidatat mollit proident deserunt
-      cillum fugiat dolor. Id incididunt laboris eiusmod aliquip incididunt quis
-      ex. Consequat ut voluptate mollit eu magna voluptate pariatur commodo
-      magna excepteur mollit non
+    text: Welcome to Fran's creative space. This portfolio shows an array of work
+      that expands from brand creation, to website design all the way to
+      copywriting. Always looking for a new challenge and a new opportunity to
+      learn, Fran is ready.
   - type: works
     title: WORKS
     button: show me
