@@ -19,7 +19,7 @@ modules:
       **Fran is a multidisciplinary designer, currently specialising in UX
       writing for accessibility. From crafting brand identities to inspiring
       entrepreneurs to be bold, Fran loves to accompany anyone on their creative
-      journey and help them create the best products possible.** 
+      journey and help them create the best products possible.**
 
 
       &nbsp;

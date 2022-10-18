@@ -49,7 +49,7 @@ collections:
       fields:
       - label: Main
         name: main
-        summary: "{{ url }}"
+        summary: "{{fields.name}}"
         widget: list
         fields:
         - label: Name
@@ -61,6 +61,7 @@ collections:
         - label: Order
           name: weight
           widget: number
+          hint: Number for sorting, lower comes first
         - label: ID
           name: identifier
           widget: uuid
@@ -128,7 +129,7 @@ collections:
 - name: pages
   label: Pages
   folder: content/pages
-  path: "{{slug}}"
+  path: "{{slug}}/"
   media_folder: "{{media_folder}}"
   public_folder: "{{public_folder}}"
   create: true
@@ -224,7 +225,8 @@ collections:
 - name: works
   label: Works
   folder: content/works
-  path: "{{slug}}"
+  path: "works/{{slug}}/"
+  preview_path: "works/{{slug}}"
   media_folder: "{{media_folder}}"
   public_folder: "{{public_folder}}"
   create: true
