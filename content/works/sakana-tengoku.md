@@ -4,6 +4,7 @@ project-type: Full Branding – Flyer Design
 date: 2019-12-01T19:24:33.601Z
 weight: 40
 image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666015204/5db8dbc697feba1a77c0f445_bakery-related-posters-design-2_wchw1k.jpg
+imageAltText: This is a mosaïque of the flyers for the restaurant.
 summary: ""
 modules:
   - type: paragraph
