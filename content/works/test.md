@@ -3,9 +3,9 @@ title: Atelier Pusteblumen
 project-type: Branding – Photo and Videography – Website – Copywriting
 date: 2022-07-01T12:42:40.700Z
 weight: 20
-image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666014269/5db8d840366cf1352cbf8880_macbook-pro-and-iphone-x-mockup-scene_neydzc.jpg
-imageAltText: Tes
-summary: Test
+image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666098918/laptop-manu_gcotlr.jpg
+imageAltText: Image of how the website looks like on a MacBook.
+summary: ""
 modules:
   - type: paragraph
     text: "F﻿or this lovely client, the creation of the brand started with naming.
