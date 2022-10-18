@@ -43,8 +43,15 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
-      - name: npm/yarn/pnpm install
-        uses: Jaid/action-npm-install@v1.2.4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: Install NPM Packages
+        run: npm ci
+      - name: Install Node Dependencies
+        
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
