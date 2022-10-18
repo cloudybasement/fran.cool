@@ -1,12 +1,22 @@
 ---
 title: Home
-summary: Esse eu id ipsum labore aliquip pariatur laborum cillum proident exercitation. Minim labore irure irure ipsum officia adipisicing pariatur voluptate non reprehenderit.
+summary: Esse eu id ipsum labore aliquip pariatur laborum cillum proident
+  exercitation. Minim labore irure irure ipsum officia adipisicing pariatur
+  voluptate non reprehenderit.
 modules:
   - type: richtext
-    text: "Aliqua veniam voluptate qui. Quis cillum ullamco magna elit. Excepteur officia elit esse minim. Veniam cillum ullamco aliquip minim irure deserunt aliqua. Adipisicing excepteur non deserunt non commodo laborum. Dolore est non consectetur ea do aliquip ex duis minim officia amet. Ad ea veniam consectetur culpa amet magna amet officia minim proident irure laboris aliquip adipisicing. Culpa id cupidatat mollit proident deserunt cillum fugiat dolor. Id incididunt laboris eiusmod aliquip incididunt quis ex. Consequat ut voluptate mollit eu magna voluptate pariatur commodo magna excepteur mollit non"
+    text: Aliqua veniam voluptate qui. Quis cillum ullamco magna elit. Excepteur
+      officia elit esse minim. Veniam cillum ullamco aliquip minim irure
+      deserunt aliqua. Adipisicing excepteur non deserunt non commodo laborum.
+      Dolore est non consectetur ea do aliquip ex duis minim officia amet. Ad ea
+      veniam consectetur culpa amet magna amet officia minim proident irure
+      laboris aliquip adipisicing. Culpa id cupidatat mollit proident deserunt
+      cillum fugiat dolor. Id incididunt laboris eiusmod aliquip incididunt quis
+      ex. Consequat ut voluptate mollit eu magna voluptate pariatur commodo
+      magna excepteur mollit non
   - type: works
     title: WORKS
-    button: see more
+    button: show me
     anchor: works
   - type: about
     title: ABOUT
