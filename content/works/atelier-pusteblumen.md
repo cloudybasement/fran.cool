@@ -7,6 +7,10 @@ image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666098918/laptop-manu
 imageAltText: Image of how the website looks like on a MacBook.
 summary: ""
 modules:
+  - type: gallery
+    images:
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666100561/Logo_b8v9pw.png
+        imageAltText: "Image of the logo for Atelier Pusteblumen. "
   - type: paragraph
     text: "For this lovely client, the creation of the brand started with naming.
       After discussing and analysing the client's wishes, we found a name that
