@@ -28,6 +28,13 @@ modules:
       - image: https://res.cloudinary.com/dikhrro6y/video/upload/v1666098197/video-manu_xufjt9.mp4
         imageAltText: "This is a video shot for Atelier Pusteblumen, showing its
           founder, Manuela, doing some woodworking. "
+  - type: paragraph
+    text: B﻿efore thinking too deeply about the website, we needed to make sure what
+      kind of content we wanted to display to the users. First step was creating
+      all the copywriting material and then some visual elements. The website is
+      all about presenting Manuela and her work, through soft yet compelling
+      photographs and an immersive video.
+    title: Creating a website
 link: ""
 gifv: https://res.cloudinary.com/dikhrro6y/video/upload/v1666100942/ezgif.com-gif-maker_1_lzlv4p.mp4
 ---
