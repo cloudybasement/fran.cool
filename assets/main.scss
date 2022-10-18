@@ -578,13 +578,14 @@ section.work-next-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
+  align-items: center;
   img {
-    aspect-ratio: 650 / 585;
+    // aspect-ratio: 650 / 585;
     grid-column-end: span 1;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     &:last-of-type{
-      aspect-ratio: 1320 / 804;
+      // aspect-ratio: 1320 / 804;
       grid-column-end: span 2;
     }
   }

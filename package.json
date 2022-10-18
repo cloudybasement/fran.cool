@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "hugo serve"
+  },
   "dependencies": {
     "@swup/body-class-plugin": "^1.0.2",
     "@swup/debug-plugin": "^2.0.0",
