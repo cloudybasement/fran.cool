@@ -1,16 +1,12 @@
 backend:
   name: git-gateway
   branch: main
-local_backend:
-  url: http://localhost:8081/api/v1
-  allowed_hosts: ['192.168.0.1']
+local_backend: true
 
 media_folder: "/static/media"
 public_folder: "/media"
 
 site_url: https://fran.cool/
-show_preview_links: true
-publish_mode: editorial_workflow
 editor:
   preview: false
 locale: en
