@@ -1,0 +1,6 @@
+<div class="module-gallery" {{ with .anchor }}id="{{ . }}"{{ end }}>
+    {{ range .images}}
+        {{ $1file := (replaceRE `(.*\/v\d*\/)` "" .image) }}
+        {{ partial "images/full" (dict "image" $1file "alt" .imageAltText "width" "1320" "height" "auto" "loading" "lazy") }}
+    {{ end }}
+</div>

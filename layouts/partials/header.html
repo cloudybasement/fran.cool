@@ -1,0 +1,23 @@
+{{ $data := site.Data.header }}
+
+<header id="start" class="header">
+    <div class="logo">
+        <a href="/#start">
+            <img src="{{ .Site.Params.logo }}" alt="Website Logo" srcset="" width="292" height="52">
+        </a>
+    </div>
+    <nav class="navbar">
+        <ul>
+            {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}" title="{{ .Title }}">
+                        {{- .Name -}}
+                    </a>
+                </li>
+            {{ end }}
+            <li class="darkmode-switch" id="darkmode-switch" role="button" aria-label="Dark mode toggle button" tabindex="0">
+                <div class="darkmode-switch-icon"></div>
+            </li>
+        </ul>
+    </nav>
+</header>

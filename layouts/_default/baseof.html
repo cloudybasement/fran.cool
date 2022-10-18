@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Params.defaultContentLanguage }}">
+  <head>
+    <base href={{.Site.BaseURL }} />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+    <meta charset="utf-8">
+    {{ block "seo" . }}
+      <meta name="description" content="{{ with .Page.Title }}{{ if ne $.Page.IsHome true }}{{ . }} | {{end}}{{ end }}{{ .Site.Title }}">
+    {{ end }}
+    {{ if eq .Page.RelPermalink "/pages/home/"}}
+      <link rel="canonical" href="{{ .Site.BaseURL }}" />
+    {{end}}
+    {{ block "canonical" .}}{{ end }}
+    <title>{{ block "title" . }}
+        {{ with .Page.Title }}{{ if ne $.Page.IsHome true }}{{ . }} | {{end}}{{ end }}{{ .Site.Title }}
+    {{ end }}</title>
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="preload" href="{{ .Site.Params.logo }}" as="image" crossorigin>
+    <link rel="preload" href="/fonts/GeneralSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Generate CSS -->
+    {{ $cssOptions := (dict "enableSourceMap" true ) }}
+    {{ $normalizeSass := resources.Get "normalize.scss" }}
+    {{ $normalizeStyle := $normalizeSass | resources.ToCSS $cssOptions  | resources.Fingerprint }}
+
+    {{ $mainSass := resources.Get "main.scss" }}
+    {{ $mainStyle := $mainSass | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $cssOptions | resources.Fingerprint }}
+
+    <link rel="stylesheet" href="{{ $normalizeStyle.RelPermalink }}" integrity="{{ $normalizeStyle.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}"  integrity="{{ $mainStyle.Data.Integrity }}">
+    
+    <!-- Generate JavaScript -->
+    {{ $jsOptions := (dict "minify" true "sourceMap" "external" "target" "es2015") }}
+    
+    {{/*  {{ $mainJs := resources.Get "main-head.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint}}
+    <script src="{{$mainJs.RelPermalink}}" integrity="{{ $mainJs.Data.Integrity }}"></script>  */}}
+
+    {{/*  {{ $mainAsyncJs := resources.Get "main-async.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
+    <script async src="{{$mainAsyncJs.RelPermalink}}" integrity="{{ $mainAsyncJs.Data.Integrity }}"></script>  */}}
+
+    {{ $mainDeferJs := resources.Get "main-defer.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
+    <script defer src="{{$mainDeferJs.RelPermalink}}" integrity="{{ $mainDeferJs.Data.Integrity }}"></script>
+
+  </head>
+  <body>
+    <main id="swup">
+      {{/*  {{ $mainStartJs := resources.Get "main-start.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
+      <script defer src="{{$mainStartJs.RelPermalink}}" integrity="{{ $mainStartJs.Data.Integrity }}"></script>  */}}
+      {{ block "intro" . }}
+      {{ end }}
+      {{ block "header" . }}
+          {{ partial "header.html" .}}
+      {{ end }}
+      <div class="main">
+        {{ block "main" . }}
+          <!-- The part of the page that begins to differ between templates -->
+        {{ end }}
+      </div>
+      {{ block "footer" . }}
+          {{ partial "footer.html" .}}
+      {{ end }}
+    </main>
+    <div class="transition-zoom"></div>
+    <div class="transition-fade"></div>
+
+    {{ $mainEndJs := resources.Get "main-end.js" | js.Build $jsOptions | resources.Minify | resources.Fingerprint }}
+    <script defer src="{{$mainEndJs.RelPermalink}}" integrity="{{ $mainEndJs.Data.Integrity }}"></script>
+  </body>
+</html>

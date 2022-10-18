@@ -1,0 +1,10 @@
+<div class="about-module" {{ with .anchor }}id="{{ . }}"{{ end }}>
+    <div class="bg-title" data-speed="1">
+        <h2>{{ .title }}</h2>
+    </div>
+    <div class="sbs-content">
+        {{ $file := (replaceRE `(.*\/v\d*\/)` "" .image) }}
+        {{ partial "images/half-dektop" (dict "image" $file "alt" .imageAltText "width" "634" "height" "auto" "loading" "lazy") }}
+        <div class="md-content">{{ .text | markdownify }}</div>
+    </div>
+</div>

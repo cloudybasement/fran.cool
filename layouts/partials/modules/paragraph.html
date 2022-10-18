@@ -1,0 +1,4 @@
+<div class="module-paragraph" {{ with .anchor }}id="{{ . }}"{{ end }}>
+<h2>{{ .title }}</h2>
+<p class="md-content">{{ .text | markdownify }}</p>
+</div>

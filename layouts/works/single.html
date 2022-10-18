@@ -1,0 +1,70 @@
+{{ define "seo" }}
+    <meta name="description" content="{{ .Params.summary }}">
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    {{ with .Params.image }}
+        {{ $file := (replaceRE `(.*\/v\d*\/)` "" .) }}
+        <meta property="og:image" content="{{ site.Params.cloudinaryBaseURL }}/w_1200,h_630,f_jpg,q_80/{{ $file }}" />
+    {{ end }}
+{{ end }}
+{{ define "main" }}
+    <section>
+        <a href="/#works" class="work-back">
+            <svg width="18" height="18" viewBox="0 0 6 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 1L1 9L5 17" stroke="var(--color-text)"/>
+            </svg>
+            Back
+        </a>
+        <div class="work-title-row">
+            <h1 class="work-title">{{ .Title }}</h1>
+            <span class="work-year">{{ .Date.Format "2006" }}</span>
+        </div>
+        <span class="work-type">{{ .Param "project-type" }}</span>
+        {{ $file := (replaceRE `(.*\/v\d*\/)` "" .Params.image) }}
+        {{ partial "images/full" (dict "image" $file "class" "work-featured-image" "alt" .Params.imageAltText "width" "1320" "height" "auto") }}
+    </section>
+    {{ range .Params.modules }}
+        <section class="work-module">
+            {{      if eq .type "gallery" }}
+                {{ partial "modules/gallery.html" . }}
+            {{ else if eq .type "paragraph" }}
+                {{ partial "modules/paragraph.html" . }}
+            {{ end }}
+        </section>
+    {{ end }}
+    {{ with .Params.link }}
+    <section class="work-module">
+        <div class="work-live-site">
+            <a href="{{ . }}">visit live site&nbsp;<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.2496 1.52418C18.263 1.11018 17.9382 0.763746 17.5242 0.75039L10.7777 0.532763C10.3637 0.519407 10.0173 0.844193 10.0039 1.25819C9.99054 1.67219 10.3153 2.01863 10.7293 2.03198L16.7262 2.22543L16.5328 8.22231C16.5194 8.63631 16.8442 8.98275 17.2582 8.9961C17.6722 9.00946 18.0186 8.68467 18.032 8.27067L18.2496 1.52418ZM2.01296 17.0472L18.013 2.04715L16.987 0.952848L0.987044 15.9528L2.01296 17.0472Z" fill="var(--color-text)"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+    {{ end }}
+    <section class="work-next-section relative">
+        <a class="works-link"
+            {{ with .PrevInSection }}
+                href="{{.RelPermalink}}"
+            {{ else }}
+                href="{{ range first 1 (where site.RegularPages "Type" "==" "works")}}{{ .RelPermalink }}{{ end }}"
+            {{ end }}>
+            <div class="bg-title" data-speed="1">
+                <span class="h2">Next</span>
+            </div>
+            <div class="work-next-gif hover-invert-button-frame">
+                {{ $file := replaceRE `\/upload\/(v\d*)\/` `/upload/f_auto/q_auto/` .Params.gifv }}
+                <video class="lazy" autoplay loop muted playsinline disablepictureinpicture
+                    poster="{{ replaceRE `\.[a-zA-Z0-9]*$` `.jpg` $file }}" >
+                    <source data-src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.webm` $file }}" type="video/webm">
+                    <source data-src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.mp4` $file }}" type="video/mp4">
+                    <source data-src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.ogv` $file }}" type="video/ogg">
+                </video>
+            </div>
+            <div class="hover-invert-button-trigger">
+                <button class="hover-invert-button">next</button>
+            </div>
+        </a>
+    </section>
+{{ end }}

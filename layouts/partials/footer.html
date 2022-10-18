@@ -1,0 +1,21 @@
+{{ $data := site.Data.footer }}
+<footer class="footer">
+    <div class="footer-marquee">
+        <div class="footer-marquee-text">
+            {{ range seq 20 }}
+                {{ $data.marquee | htmlUnescape }}
+            {{ end }}
+        </div>
+    </div>
+    <div class="footer-email">
+        <a class="eml-protected" href="#">{{ $data.email }}</a>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-signature">{{ $data.signature }}</div>
+        <div class="footer-links">
+            {{ range $data.links }}
+                <a href="{{ .url }}" target="_blank">{{ .text }}</a>
+            {{ end }}
+        </div>
+    </div>
+</footer>

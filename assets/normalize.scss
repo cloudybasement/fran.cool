@@ -1,0 +1,143 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  font-size: 16px;
+  // scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga", "kern";
+  font-size: 24px;
+  @media screen and (max-width: 48rem) {
+    font-size: 16px;
+  }
+}
+
+section,
+canvas {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+}
+
+td,
+th {
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul,
+ol,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none outside none;
+}
+
+a {
+  outline: medium none;
+  text-decoration: none;
+  background: transparent;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  font-size: 0;
+  max-width: 100%;
+}
+
+b,
+strong {
+  font-weight: normal;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: 1.15;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+select {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: button;
+  font-size: inherit;
+  color: inherit;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+textarea,
+input {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+pre {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
