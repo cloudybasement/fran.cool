@@ -11,5 +11,15 @@ modules:
     text: Nisi magna id ad in proident dolore incididunt enim velit cupidatat amet
       et occaecat consequat.
     title: Hello
+  - type: gallery
+    images:
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666097909/DSC_0105_ywvxwd.jpg
+        imageAltText: "This is a photograph of a wooden spoon held up to show the size
+          compared to a hand. "
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666097909/DSC_0218_qp3qev.jpg
+        imageAltText: "This is a photograph of her products with some embellishments. "
+      - image: https://res.cloudinary.com/dikhrro6y/video/upload/v1666098197/video-manu_xufjt9.mp4
+        imageAltText: "This is a video shot for Atelier Pusteblumen, showing its
+          founder, Manuela, doing some woodworking. "
 link: ""
 ---
