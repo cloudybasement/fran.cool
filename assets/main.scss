@@ -468,6 +468,7 @@ div.work-title-row {
   }
 }
 h1.work-title {
+  letter-spacing: .04em;
   margin-top: 5rem;
   @media screen and (max-width: 48rem) {
     font-size: 4.5rem;
@@ -584,7 +585,8 @@ section.work-next-section {
     grid-column-end: span 1;
     width: 100%;
     object-fit: contain;
-    &:nth-of-type(3n){
+    &:nth-of-type(3n),
+    &:only-child{
       // aspect-ratio: 1320 / 804;
       grid-column-end: span 2;
     }
