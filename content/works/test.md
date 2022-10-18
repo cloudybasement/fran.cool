@@ -8,9 +8,12 @@ imageAltText: Tes
 summary: Test
 modules:
   - type: paragraph
-    text: Nisi magna id ad in proident dolore incididunt enim velit cupidatat amet
-      et occaecat consequat.
-    title: Hello
+    text: "F﻿or this lovely client, the creation of the brand started with naming.
+      After discussing and analysing the client's wishes, we found a name that
+      she felt was perfect for her endeavour: Atelier Pusteblumen. Pusteblumen
+      is the German name for Dandelions. The logo is a representation of her
+      love for nature and there is a subtle mention about her family."
+    title: Creating an identity
   - type: gallery
     images:
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666097909/DSC_0105_ywvxwd.jpg
