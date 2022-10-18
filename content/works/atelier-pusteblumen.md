@@ -29,4 +29,5 @@ modules:
         imageAltText: "This is a video shot for Atelier Pusteblumen, showing its
           founder, Manuela, doing some woodworking. "
 link: ""
+gifv: https://res.cloudinary.com/dikhrro6y/video/upload/v1666100942/ezgif.com-gif-maker_1_lzlv4p.mp4
 ---
