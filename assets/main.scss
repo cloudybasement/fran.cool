@@ -584,7 +584,7 @@ section.work-next-section {
     grid-column-end: span 1;
     width: 100%;
     object-fit: contain;
-    &:last-of-type{
+    &:nth-of-type(3n){
       // aspect-ratio: 1320 / 804;
       grid-column-end: span 2;
     }
