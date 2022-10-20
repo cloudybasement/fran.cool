@@ -1,2 +1,2 @@
-{{ $data := .Site.Data.netlifyRedirects }}{{ range $data.redirects }}{{ .from | plainify}} {{ .to | plainify}}
+{{ $data := .Site.Data.netlifyRedirects }}{{ range $data.redirects }}{{ .from | plainify}} {{ .to | plainify}} {{ .code | plainify}}
 {{ end }}

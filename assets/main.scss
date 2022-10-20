@@ -164,6 +164,7 @@ div.main {
 
 section {
     margin: 8.125rem 0;
+    position: relative;
 }
 
 section.work-module {
@@ -434,7 +435,8 @@ section.intro{
     }
     a{
       width: 86.7%;
-      img.intro-image {
+      img.intro-image,
+      video {
         width: 100%;
         height: auto;
         margin-bottom: 5rem;
@@ -506,6 +508,58 @@ section.work-next-section {
       width: 100%;
       height: auto;
     }
+  }
+}
+
+// 404 PAGE
+.bounce-404 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: bounce linear 20s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translate(calc(0vw - 0%), calc(0vh - 0%));
+  }
+  12% {
+    transform: translate(calc(100vw - 100%), calc(46vh - 46%));
+  }
+  24% {
+    transform: translate(calc(0vw - 0%), calc(92vh - 92%));
+  }
+  26% {
+    transform: translate(calc(16vw - 16%), calc(100vh - 100%));
+  }
+  34% {
+    transform: translate(calc(100vw - 100%), calc(62vh - 62%));
+  }
+  44% {
+    transform: translate(calc(0vw - 0%), calc(38vh - 38%));
+  }
+  54% {
+    transform: translate(calc(92vw - 92%), calc(0vh - 0%));
+  }
+  56% {
+    transform: translate(calc(100vw - 100%), calc(16vh - 16%));
+  }
+  63% {
+    transform: translate(calc(83vw - 83%), calc(100vh - 100%));
+  }
+  70% {
+    transform: translate(calc(67vw - 67%), calc(0vh - 0%));
+  }
+  78% {
+    transform: translate(calc(50vw - 50%), calc(100vh - 100%));
+  }
+  85% {
+    transform: translate(calc(33vw - 33%), calc(0vh - 0%));
+  }
+  92% {
+    transform: translate(calc(17vw - 17%), calc(100vh - 100%));
+  }
+  100% {
+    transform: translate(calc(0vw - 0%), calc(0vh - 0%));
   }
 }
 

@@ -32,22 +32,25 @@ function init() {
     const reducedMotioMediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     let darkmodeSwitch = document.getElementById('darkmode-switch');
-    darkmodeSwitch.addEventListener("click", e =>{
-        document.querySelector('body').classList.add('toggle-darkmode');
-        // console.log(e);
-        if(currentTheme == "light"){
-            document.querySelector('body').classList.add('dark-mode');
-            currentTheme = "dark"
-            localStorage.setItem("theme", currentTheme);
-        } else {
-            document.querySelector('body').classList.remove('dark-mode');
-            currentTheme = "light"
-            localStorage.setItem("theme", currentTheme);
-        }
-    })
+    if(darkmodeSwitch){
+        darkmodeSwitch.addEventListener("click", e =>{
+            document.querySelector('body').classList.add('toggle-darkmode');
+            // console.log(e);
+            if(currentTheme == "light"){
+                document.querySelector('body').classList.add('dark-mode');
+                currentTheme = "dark"
+                localStorage.setItem("theme", currentTheme);
+            } else {
+                document.querySelector('body').classList.remove('dark-mode');
+                currentTheme = "light"
+                localStorage.setItem("theme", currentTheme);
+            }
+        })
+    }
 
     // Button follow mouse effect
     let followButtonCards = [...document.querySelectorAll('.hover-invert-button-trigger')];
+    // console.log("", followButtonCards);
     if(followButtonCards){
         followButtonCards.forEach(e => {
             //console.log(e);

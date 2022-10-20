@@ -1,0 +1,46 @@
+{{ define "seo" }}
+  {{ $page := .Page }}
+  {{ with $page }}
+    <meta name="description" content="{{ .Params.summary }}">
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:image" content="{{ .Site.Params.logo }}" />
+  {{ end }}
+{{ end }}
+{{ define "header" }}
+<div></div>
+{{ end }}
+{{ define "intro" }}
+    {{ $data := site.Data.error404 }}
+    <section class="intro">
+      <div class="intro-container">
+        <img class="intro-logo" src="{{ $data.background }}" alt="oh no! 404 - Fran is Lost" width="1320" height="930">
+        <a href="/" class="relative">
+            {{ $file := replaceRE `\/upload\/(v\d*)\/` `/upload/f_auto/q_auto/` $data.gifv }}
+            <video autoplay loop muted playsinline disablepictureinpicture
+                poster="{{ replaceRE `\.[a-zA-Z0-9]*$` `.jpg` $file }}" >
+                <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.webm` $file }}" type="video/webm">
+                <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.mp4` $file }}" type="video/mp4">
+                <source src="{{ replaceRE `\.[a-zA-Z0-9]*$` `.ogv` $file }}" type="video/ogg">
+            </video>
+            <div class=" hover-invert-button-trigger" aria-label="back to safety">
+              <button class="hover-invert-button" aria-label="Scroll to main page content">
+                <svg width="12" height="36" viewBox="0 0 6 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 1L1 9L5 17" stroke="#232323"/>
+                </svg>
+              </button>
+            </div>
+          </a>
+      </div>
+      <div class="bounce-404">
+        <img class="" src="{{ $data.image404 }}" alt="" width="602" height="333">
+      </div>
+    </section>
+{{end}}
+{{ define "main" }}
+<div></div>
+{{ end }}
+{{ define "footer" }}
+<div></div>
+{{ end }}
