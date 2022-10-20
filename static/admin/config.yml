@@ -112,6 +112,22 @@ collections:
       - label: URL
         name: url
         widget: string
+  - file: data/404.yml
+    label: 404 Page
+    name: '404'
+    fields:
+    - label: Background Graphic
+      name: background
+      widget: image
+      allow_multiple: false
+    - label: GIFV
+      name: gifv
+      widget: file
+      hint: Insert video file as Mp4 or WEBM
+      required: false
+      media_library:
+        name: cloudinary
+        output_filename_only: false
   - file: data/netlifyRedirects.yml
     label: Redirects
     name: redirects
