@@ -1,14 +1,16 @@
 {
   "scripts": {
-    "dev": "npx netlify-cms-proxy-server & hugo serve"
+    "dev": "pnpm exec netlify-cms-proxy-server --localPort 1313 & hugo serve"
   },
   "dependencies": {
     "@swup/body-class-plugin": "^1.0.2",
     "@swup/debug-plugin": "^2.0.0",
     "@swup/scroll-plugin": "^1.3.1",
+    "@types/node": "*",
     "swup": "^2.0.19"
   },
   "devDependencies": {
-    "netlify-cli": "^12.0.4"
+    "netlify-cli": "^12.0.4",
+    "netlify-cms-proxy-server": "^1.3.24"
   }
 }
