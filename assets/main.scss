@@ -513,56 +513,65 @@ section.work-next-section {
 
 // 404 PAGE
 .bounce-404 {
+  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
-  animation: bounce linear 20s infinite;
-  width: 23vw;
+  // animation: bounce linear 20s infinite;
+  width: 28vw;
+  mask-image: var(--mask);
+  -webkit-mask-image: var(--mask);
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  transform: translate(calc(var(--X)*1px), calc(var(--Y)*1px));
 }
-@keyframes bounce {
-  0% {
-    transform: translate(calc(0vw - 0%), calc(0vh - 0%));
-  }
-  12% {
-    transform: translate(calc(100vw - 100%), calc(46vh - 46%));
-  }
-  24% {
-    transform: translate(calc(0vw - 0%), calc(92vh - 92%));
-  }
-  26% {
-    transform: translate(calc(16vw - 16%), calc(100vh - 100%));
-  }
-  34% {
-    transform: translate(calc(100vw - 100%), calc(62vh - 62%));
-  }
-  44% {
-    transform: translate(calc(0vw - 0%), calc(38vh - 38%));
-  }
-  54% {
-    transform: translate(calc(92vw - 92%), calc(0vh - 0%));
-  }
-  56% {
-    transform: translate(calc(100vw - 100%), calc(16vh - 16%));
-  }
-  63% {
-    transform: translate(calc(83vw - 83%), calc(100vh - 100%));
-  }
-  70% {
-    transform: translate(calc(67vw - 67%), calc(0vh - 0%));
-  }
-  78% {
-    transform: translate(calc(50vw - 50%), calc(100vh - 100%));
-  }
-  85% {
-    transform: translate(calc(33vw - 33%), calc(0vh - 0%));
-  }
-  92% {
-    transform: translate(calc(17vw - 17%), calc(100vh - 100%));
-  }
-  100% {
-    transform: translate(calc(0vw - 0%), calc(0vh - 0%));
-  }
-}
+// @keyframes bounce {
+//   0% {
+//     transform: translate(calc(0vw - 0%), calc(0vh - 0%));
+//   }
+//   12% {
+//     transform: translate(calc(100vw - 100%), calc(46vh - 46%));
+//   }
+//   24% {
+//     transform: translate(calc(0vw - 0%), calc(92vh - 92%));
+//   }
+//   26% {
+//     transform: translate(calc(16vw - 16%), calc(100vh - 100%));
+//   }
+//   34% {
+//     transform: translate(calc(100vw - 100%), calc(62vh - 62%));
+//   }
+//   44% {
+//     transform: translate(calc(0vw - 0%), calc(38vh - 38%));
+//   }
+//   54% {
+//     transform: translate(calc(92vw - 92%), calc(0vh - 0%));
+//   }
+//   56% {
+//     transform: translate(calc(100vw - 100%), calc(16vh - 16%));
+//   }
+//   63% {
+//     transform: translate(calc(83vw - 83%), calc(100vh - 100%));
+//   }
+//   70% {
+//     transform: translate(calc(67vw - 67%), calc(0vh - 0%));
+//   }
+//   78% {
+//     transform: translate(calc(50vw - 50%), calc(100vh - 100%));
+//   }
+//   85% {
+//     transform: translate(calc(33vw - 33%), calc(0vh - 0%));
+//   }
+//   92% {
+//     transform: translate(calc(17vw - 17%), calc(100vh - 100%));
+//   }
+//   100% {
+//     transform: translate(calc(0vw - 0%), calc(0vh - 0%));
+//   }
+// }
 
 // RICHTEXT MODULE
 .richtext-module {
