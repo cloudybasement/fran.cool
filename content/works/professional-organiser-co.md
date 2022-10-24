@@ -22,12 +22,8 @@ modules:
     anchor: 6
   - type: gallery
     images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-4.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/dog.jpg
-        imageAltText: cool alt text
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666633149/Screen_Shot_2022-10-09_at_12.23_1_drkzmd.png
+        imageAltText: Image of the chosen design for the business cards
     anchor: 7
 link: https://fran.cool/
 gifv: https://res.cloudinary.com/dikhrro6y/video/upload/v1665341957/another-one_kd7s6h.mp4
