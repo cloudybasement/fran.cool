@@ -1,49 +1,30 @@
 ---
 title: Professional Organiser Co
 slug: professionalorganiserco
-project-type: Design - Strategy - Website – Copywriting
+project-type: Identity – Branding – Strategy – ONGOING
 date: 2022-10-04T18:24:07.347Z
 weight: 10
-image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-4.jpg
-summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-  turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
-  fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed
-  risus. "
+image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666628436/Mockup-Recovered1_urbkwq.jpg
+imageAltText: This is an image of the logo
+summary: ""
 modules:
   - type: paragraph
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-      Maecenas eget condimentum velit, sit amet feugiat lectus.
-    title: Lorem Ipsum
-    anchor: "2"
-  - type: gallery
-    images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-4.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/dog.jpg
-        imageAltText: cool alt text
-    anchor: "3"
-  - type: paragraph
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-      Maecenas eget condimentum velit, sit amet feugiat lectus.
-    title: Lorem Ipsum
-    anchor: "4"
-  - type: gallery
-    images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1664808460/cld-sample-2.jpg
-        imageAltText: cool alt text
-    anchor: 5
-  - type: paragraph
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-      Maecenas eget condimentum velit, sit amet feugiat lectus.
-    title: Lorem Ipsum
+    text: >-
+      T﻿he logo for Professional Organiser Co needed to reflect their values and
+      be accessible. It was all about the concept, which follows as such: *Home
+      means protection and serenity. It’s an enclosed space that is familiar to
+      only few individuals, the result of years of curation to transform room
+      into home. It is a shelter and a refuge. People are very protective of
+      their homes but also susceptible to how it is perceived by others. Just
+      like humans, a home is houses constant changes through different life
+      stages. The different floors symbolise growth and transformation, a
+      never-ending cycle. It also shows that life can be messy but always
+      recalibrated. With a feeling of safety but unequal transformation within,
+      this symbol translates life into icon.*
+
+
+      W﻿ith that, the logo was created to be transformational and strong.
+    title: Creating a visual identity
     anchor: 6
   - type: gallery
     images:
