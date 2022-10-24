@@ -9,7 +9,7 @@ summary: ""
 modules:
   - type: gallery
     images:
-      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666100561/Logo_b8v9pw.png
+      - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666627600/Mockup-Recovered_xva862.jpg
         imageAltText: "Image of the logo for Atelier Pusteblumen. "
   - type: paragraph
     text: "For this lovely client, the creation of the brand started with naming.
