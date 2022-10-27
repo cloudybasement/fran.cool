@@ -25,6 +25,6 @@ modules:
       - image: https://res.cloudinary.com/dikhrro6y/image/upload/v1666633149/Screen_Shot_2022-10-09_at_12.23_1_drkzmd.png
         imageAltText: Image of the chosen design for the business cards
     anchor: 7
-link: https://fran.cool/
+link: ""
 gifv: https://res.cloudinary.com/dikhrro6y/video/upload/v1665341957/another-one_kd7s6h.mp4
 ---
