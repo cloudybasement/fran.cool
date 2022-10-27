@@ -1,43 +1,38 @@
-baseURL: 'https://fran.cool/'
-title: fran.cool
 languageCode: en-us
+params:
+  logo: https://res.cloudinary.com/dikhrro6y/image/upload/v1664819388/fran.cool-black.svg
+  cloudinaryBaseURL: https://res.cloudinary.com/dikhrro6y
+  defaultContentLanguage: en
+  favicon: https://res.cloudinary.com/dikhrro6y/image/upload/v1666911623/wolf_1f43a_jalsfb.png
+permalinks:
+  - works: /:slug
 taxonomies:
   page: pages
   works: works
-
-permalinks:
-  - works: /:slug
-
-menu:
-  main:
-  - identifier: i038rh390h
-    name: "Works"
-    title: "works"
-    url: "/#works"
-    weight: 20
-  - identifier: 3u9r0f30no
-    name: "About"
-    title: "about"
-    url: "/#about"
-    weight: 30
-
-params:
-  logo: https://res.cloudinary.com/dikhrro6y/image/upload/v1664819388/fran.cool-black.svg
-  cloudinaryBaseURL: "https://res.cloudinary.com/dikhrro6y"
-  defaultContentLanguage: en
-
+outputs:
+  home:
+    - HTML
+    - redirects
 mediaTypes:
   text/x-netlify:
     suffixes: []
-
+title: fran.cool
 outputFormats:
   redirects:
     baseName: _redirects
     isPlainText: true
     mediaType: text/x-netlify
     ugly: true
-
-outputs:
-  home:
-  - HTML
-  - redirects
+baseURL: https://fran.cool/
+menu:
+  main:
+    - identifier: i038rh390h
+      name: Works
+      title: works
+      url: /#works
+      weight: 20
+    - identifier: 3u9r0f30no
+      name: About
+      title: about
+      url: /#about
+      weight: 30
