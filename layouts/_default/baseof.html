@@ -10,6 +10,12 @@
     {{ block "seo" . }}
       <meta name="description" content="{{ with .Page.Title }}{{ if ne $.Page.IsHome true }}{{ . }} | {{end}}{{ end }}{{ .Site.Title }}">
     {{ end }}
+    {{ $file := (replaceRE `(.*\/v\d*\/)` "" .Site.Params.favicon) }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.Params.cloudinaryBaseURL }}/w_16,f_ico,q_auto/{{ $file }}"/>
+    <link rel="icon" type="image/png" href="{{ site.Params.cloudinaryBaseURL }}/w_16,f_png,q_auto/{{ $file }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ site.Params.cloudinaryBaseURL }}/w_32,f_png,q_auto/{{ $file }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.Params.cloudinaryBaseURL }}/w_196,f_png,q_auto/{{ $file }}" sizes="196x196">
+    <link rel="apple-touch-icon" href="{{ site.Params.cloudinaryBaseURL }}/w_167,f_png,q_auto/{{ $file }}">
     {{ if eq .Page.RelPermalink "/pages/home/"}}
       <link rel="canonical" href="{{ .Site.BaseURL }}" />
     {{end}}
@@ -18,7 +24,6 @@
         {{ with .Page.Title }}{{ if ne $.Page.IsHome true }}{{ . }} | {{end}}{{ end }}{{ .Site.Title }}
     {{ end }}</title>
     <link rel="preconnect" href="https://res.cloudinary.com">
-    <link rel="preload" href="{{ .Site.Params.logo }}" as="image" crossorigin>
     <link rel="preload" href="/fonts/GeneralSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Generate CSS -->
     {{ $cssOptions := (dict "enableSourceMap" true ) }}

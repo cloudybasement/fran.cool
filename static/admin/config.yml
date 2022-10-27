@@ -43,6 +43,10 @@ collections:
         name: logo
         widget: image
         allow_multiple: false
+      - label: Favicon
+        name: favicon
+        widget: image
+        allow_multiple: false
     - label: Menu
       name: menu
       widget: object
