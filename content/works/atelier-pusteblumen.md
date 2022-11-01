@@ -35,6 +35,6 @@ modules:
       all about presenting Manuela and her work, through soft yet compelling
       photographs and an immersive video.
     title: Creating a website
-link: ""
+link: https://www.atelierpusteblumen.ch/
 gifv: https://res.cloudinary.com/dikhrro6y/video/upload/v1666100942/ezgif.com-gif-maker_1_lzlv4p.mp4
 ---
