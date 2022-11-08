@@ -26,6 +26,6 @@ modules:
 
 
       F﻿ran is currently trying to become an expert in accessibility when it comes to web design, making sure that empathy is at the heart of any digital experiences she takes part in designing. When she's not at her desk, you can find her reading in the most comfortable chair in the world or cuddling on the ground with her trusty German Shepherd (guess his name 🌴+📖+🐻).
-    image: dog.jpg
+    image: https://res.cloudinary.com/dikhrro6y/image/upload/v1667912284/portrait_xesjqd.jpg
     anchor: about
 ---
